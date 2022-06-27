@@ -35,8 +35,8 @@ return [
             'loginLogo' => '',
         ],
         'cfajob' => [
-            'recaptcha_client_key' => '6Lct-fwZAAAAANhuWShKq1p92qvTNvt1T5TaEDz_',
-            'recaptcha_secret_key' => '6Lct-fwZAAAAAMM5l_lYIAo9Y8av3O16Tggy0dg-',
+            'recaptcha_client_key' => '',
+            'recaptcha_secret_key' => '',
             'storagePid' => '48',
             'use_recaptcha' => '0',
             'userOfferPid' => '44',
