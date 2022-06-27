@@ -1,0 +1,122 @@
+ul.f3-widget-paginator li.previous,
+ul.f3-widget-paginator li.next {
+    display: none !important;
+}
+
+ul.f3-widget-paginator li.current {
+    color: #fff;
+    background-color: #707070;
+    font-size: 14px;
+}
+
+
+.cfajob_flashmessages {
+    background-color: #CDEACA;
+    border: 1px solid #58B548;
+    color: #3B7826;
+}
+.cfajob_flashmessages > div {
+    background-position: 10px 12px;
+    background-repeat: no-repeat;
+    margin-bottom: 4px;
+    padding: 12px 12px 12px 36px;
+}
+
+/* Detail user */
+.detail-main-info .last-block {
+    margin-bottom: 40px;
+}
+.detail-main-info .bold,
+.detail-main-info .txt-green {
+    font-weight: bold;
+}
+.detail-main-info .detail-info {
+    margin-bottom: 3px;
+}
+.detail-additional-info {
+    margin-bottom: 40px;
+}
+.detail-additional-info p {
+    margin: 3px 0;
+    color: #767676;
+}
+.about > span {
+    font-weight: bold;
+}
+.relations {
+    max-width: 800px;
+}
+.relations .row {
+    margin-bottom: 10px;
+}
+
+.detail-extended-info .bold {
+    font-weight: bold;
+}
+.detail-extended-info .detail-info,
+.detail-extended-info p {
+    color: #767676;
+}
+.download-link a {
+    color: #519A2A;
+}
+
+span.status-not-available {
+    background: #ffd0d0;
+    border: 1px solid #C70964;
+    display: inline-block;
+    margin-top: 5px;
+    padding: 5px;
+}
+span.status-available {
+    background: #1fad83;
+    border: 1px solid #468966;
+    display: inline-block;
+    margin-top: 5px;
+    padding: 5px;
+    color: #fff;
+}
+.return-link {
+    text-align: right;
+    margin-bottom: 10px;
+}
+.detail-image {
+    text-align: right;
+}
+
+ul.typo3-messages li {
+    list-style: none;
+}
+ul.typo3-messages .alert-danger p.alert-message {
+    color: #A94442;
+}
+ul.typo3-messages .alert-success p.alert-message {
+    color: #3C763D;
+}
+.cart-success {
+    background: #1fad83;
+    border: 1px solid #468966;
+    display: inline-block;
+    margin-top: 5px;
+    padding: 5px;
+    color: #fff;
+    font-size: 13px !important;
+}
+a.no-text-decor {
+    text-decoration: none !important;
+}
+.uppercase {
+    text-transform: uppercase;
+    color: #519A2A;
+}
+
+td.col-number,
+#middle-office .table-middle .table-std td.col-number,
+#middle-office .table-middle .table-std td:first-child{
+    width: 10% !important;
+    max-width: 30px !important;
+}
+
+span.paginator-control a {
+    font-size: 14px !important;
+}

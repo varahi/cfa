@@ -1,0 +1,26 @@
+<tr>
+    <td>
+        <f:comment>
+            <a href="#" class="link-dialog" data-dialog="lightbox-offer-1">
+                <span class="txt-pink">{student.firstName} {student.lastName}</span>
+            </a>
+        </f:comment>
+
+        <f:link.action action="show" arguments="{user: student}">
+            <span class="txt-pink">{student.lastName} {student.firstName}</span>
+        </f:link.action>
+    </td>
+    <td>{student.location.name}</td>
+    <td><f:link.email email="{student.email}" /></td>
+    <td>{student.position.name}
+        <span class="txt-green timeago" title="{f:format.date(format: 'Y-m-d H:i:s', date: '{student.crdate}')}">
+            <f:format.date format="%d.%m.%Y">{student.crdate}</f:format.date>
+        </span>
+    </td>
+    <td>
+        <div class="cart-{student.uid}">
+            <input type="checkbox" {f:if(condition: '{cartItem.uid} == {student.uid}', then: 'checked') -> f:for(each: '{cartItems}', as: 'cartItem')} />
+        </div>
+        <f:render partial="FrontendUser/Table/Javascript" arguments="{student: student}"/>
+    </td>
+</tr>

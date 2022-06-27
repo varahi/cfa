@@ -1,0 +1,62 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+      xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers"
+      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+      xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<f:layout name="Page"/>
+
+<f:section name="section_content">
+	<main>
+		<div id="headband">
+			<div id="top-home">	
+				<f:render partial="Menu2" arguments="{_all}" />
+			</div>
+			<f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{data.uid}', colPos: '2'}" />
+			<div id="main-title">
+				<div class="content-inner">
+					<h1><f:format.raw>{pageTitle}</f:format.raw></h1>
+				</div>
+			</div>	
+		</div>
+		<div id="wrap-content">
+			<div class="content-inner">
+				<f:render partial="Breadcrumb" arguments="{_all}" />
+				<div class="wrap-center">
+					<section id="main-wrap" class="left-wrap">
+						<article>
+							<div id="main-content">
+								<f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{data.uid}', colPos: '0'}" />
+							</div>
+						</article>
+					</section>
+					<section id="right-wrap">
+						<article>
+							<f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{data.uid}', colPos: '1'}" />
+						</article>
+					</section>
+				</div>
+			</div>
+			<f:if condition="{data.uid} == 9">
+			<section id="section3" class="block-home">
+				<div class="content-inner">
+					<article>
+						<p class="title">Venir dans l’un de nos CFA</p>
+						<f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{homepage}', colPos: '104'}" />
+					</article>
+				</div>
+			</section>
+			</f:if>
+			<section id="section4" class="block-home">
+				<div class="content-inner">
+					<article>
+						<f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{homepage}', colPos: '105'}" />
+					</article>
+				</div>
+			</section>
+		</div>
+	</main>
+
+</f:section>
+
+</html>

@@ -1,0 +1,34 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<script>
+    $(document).ready(function(){
+        $('div.cart-<f:format.raw>{student.uid}</f:format.raw> input').on('ifChecked', function(event){
+            var url = '<f:format.raw>{f:uri.action(action: 'addToCart', controller: 'FrontendUser', arguments: '{item: student}')}</f:format.raw>';
+            dataString = 'Item added to cart';
+            jQuery.ajax({
+                url: url,
+                data: dataString,
+                type: "POST",
+                success:function(){
+                    $(".cart-<f:format.raw>{student.uid}</f:format.raw>").append(' <span class="cart-success">Item added to cart</span>');
+                },
+                error:function (){}
+            });
+        });
+        $('div.cart-<f:format.raw>{student.uid}</f:format.raw> input').on('ifUnchecked', function(event){
+            var url = '<f:format.raw>{f:uri.action(action: 'removeFromCart', controller: 'FrontendUser', arguments: '{item: student}')}</f:format.raw>';
+            dataString = 'Item removed from cart';
+            jQuery.ajax({
+                url: url,
+                data: dataString,
+                type: "POST",
+                success:function(){
+                    $(".cart-<f:format.raw>{student.uid}</f:format.raw>").append(' <span class="cart-success">Item removed from cart</span>');
+                },
+                error:function (){}
+            });
+        });
+    });
+</script>
+
+</html>

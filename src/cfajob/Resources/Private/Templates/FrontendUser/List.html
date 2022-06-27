@@ -1,0 +1,91 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+    <f:layout name="Default" />
+
+    <f:section name="content">
+
+        <f:comment>
+            <f:render partial="Misc/FlashMessages" arguments="{_all}" />
+        </f:comment>
+
+        <f:flashMessages />
+        <f:render partial="FormErrors" />
+
+
+	<f:comment>
+        <f:security.ifAuthenticated>
+            <f:if condition="{settings.userProfilePage}">
+                <p>
+                    <f:link.page pageUid="{settings.userProfilePage}" class="bt-pink no-text-decor" title="{f:translate(key:'tx_cfajob.go_user_profile')}">
+                        <f:translate key="tx_cfajob.user_profile" />
+                    </f:link.page>
+                </p>
+            </f:if>
+        </f:security.ifAuthenticated>
+	</f:comment>
+
+        <f:if condition="{settings.studentListInfo}">
+            <f:format.raw>{settings.studentListInfo}</f:format.raw>
+        </f:if>
+
+        <div id="middle-office">
+            <f:form
+                    action="list"
+                    controller="FrontendUser"
+                    name="studentList"
+                    class="form-std" >
+
+                <f:render partial="FrontendUser/Form/Fields" arguments="{_all}" />
+                <f:render partial="FrontendUser/Form/Filter" arguments="{_all}" />
+				<div class="input-submit-filter">
+					<f:form.submit value="{f:translate(key:'tx_cfajob.search')}" />
+
+					<f:link.page pageUid="{f:cObject(typoscriptObjectPath:'lib.currentPageId')}" class="bt-green">
+						<f:translate key="tx_cfajob.reset" />
+					</f:link.page>
+				</div>
+            </f:form>
+
+            <div class="table-middle">
+                <f:if condition="{students}">
+                    <f:then>
+                        <f:if condition="{students->f:count()} > {settings.pagination.itemsPerPage}">
+                            <f:then>
+                                <f:widget.paginate objects="{students}" as="paginatedStudents" configuration="{settings.pagination}">
+                                    <table class="table-std">
+                                        <f:render partial="FrontendUser/Table/Thead" arguments="{_all}" />
+                                        <tbody>
+                                        <f:for each="{paginatedStudents}" as="student" iteration="iterator">
+                                            <f:render partial="FrontendUser/Table/Properties" arguments="{_all}" />
+                                        </f:for>
+                                        </tbody>
+                                    </table>
+                                </f:widget.paginate>
+                            </f:then>
+                            <f:else>
+                                <table class="table-std">
+                                    <f:render partial="FrontendUser/Table/Thead" arguments="{_all}" />
+                                    <tbody>
+                                    <f:for each="{students}" as="student" iteration="iterator">
+                                        <f:render partial="FrontendUser/Table/Properties" arguments="{_all}" />
+                                    </f:for>
+                                    </tbody>
+                                </table>
+                            </f:else>
+                        </f:if>
+                    </f:then>
+                    <f:else>
+                        <p style="margin-top: 20px"><f:translate key="tx_cfajob.no_students" /></p>
+                    </f:else>
+                </f:if>
+            </div>
+        </div>
+
+        <script type="text/javascript">
+            var $j = jQuery.noConflict();
+            $j(document).ready(function() {
+                $j("span.timeago").timeago();
+            });
+        </script>
+
+    </f:section>
+</html>

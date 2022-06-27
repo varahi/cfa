@@ -1,0 +1,70 @@
+<div xmlns="http://www.w3.org/1999/xhtml" lang="en"	xmlns:f="http://typo3.org/ns/fluid/ViewHelpers" >
+<f:layout name="Default" />
+
+<f:section name="content">
+
+    <f:comment>
+        <f:render partial="Misc/FlashMessages" arguments="{_all}" />
+    </f:comment>
+
+    <f:flashMessages />
+    <f:render partial="FormErrors" />
+
+    <div id="middle-office">
+
+        <f:form class="form-std"
+                action="create"
+                name="newFrontendUser"
+                object="{newFrontendUser}"
+                enctype="multipart/form-data">
+
+            <fieldset>
+                <f:render partial="FrontendUser/New/MainFields" />
+                <div>
+                    <label for="title"><f:translate key="tx_cfajob.user_form.title_cv" />  *</label>
+                    <f:form.textfield id="title" property="titleCV"
+                                      placeholder="{f:translate(key:'tx_cfajob.user_form.title_cv_example')}" required="1" />
+                </div>
+                <div class="input-flex">
+                    <div>
+                        <label for="lieu"><f:translate key="tx_cfajob.user_form.location" /> *</label>
+                        <input type="text" name="location" id="lieu" placeholder="ex. Marseille" required="true"/>
+                    </div>
+                    <f:render partial="FrontendUser/New/File" section="photo" arguments="{_all}" />
+                </div>
+                <div>
+                    <label for="poste"><f:translate key="tx_cfajob.user_form.position" /> *</label>
+                    <div class="input-select">
+                        <f:form.select
+                                id="poste"
+                                property="position"
+                                options="{positions}"
+                                prependOptionLabel="{f:translate(id:'tx_cfajob.user_form.choose_category')}"
+                                optionLabelField="name"
+                                optionValueField="uid"
+                                required="1" />
+                    </div>
+                </div>
+                <div>
+                    <label for="perso"><f:translate key="tx_cfajob.user_form.who_are_you" /> *</label>
+                    <f:form.textarea id="perso" property="about" required="1" />
+                </div>
+                <f:render partial="FrontendUser/New/Diplome" />
+                <f:render partial="FrontendUser/New/Experience" />
+                <f:render partial="FrontendUser/New/File" section="cv" arguments="{_all}"/>
+
+                <f:if condition="{useRecaptcha} == 1">
+                    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+                    <div class="g-recaptcha" data-sitekey="{clientKey}"></div>
+                </f:if>
+
+                <div class="input-submit">
+                    <input type="submit" value="{f:translate(id:'tx_cfajob.validate')}"/>
+                </div>
+            </fieldset>
+        </f:form>
+    </div>
+
+
+</f:section>
+</div>

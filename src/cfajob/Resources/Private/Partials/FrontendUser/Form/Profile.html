@@ -1,0 +1,58 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+
+<div class="input-flex">
+    <div>
+        <label for="name"><f:translate key="tx_cfajob_domain_model_frontenduser.name" /></label>
+        <f:form.textfield id="name" property="name" />
+    </div>
+    <div>
+        <label for="firstName"><f:translate key="tx_cfajob_domain_model_frontenduser.first_name" /></label>
+        <f:form.textfield id="firstName" property="firstName" />
+    </div>
+    <div>
+        <label for="firstName"><f:translate key="tx_cfajob_domain_model_frontenduser.last_name" /></label>
+        <f:form.textfield id="firstName" property="lastName" />
+    </div>
+</div>
+
+<div class="input-flex">
+    <div>
+        <div class="input-select">
+            <label for="city"><f:translate key="tx_cfajob_domain_model_location.city" /><span class="required"> *</span> :</label>
+            <f:form.select
+                    id="city"
+                    property="location"
+                    options="{cities}"
+                    prependOptionLabel="{f:translate(id:'tx_cfajob.please_select')}"
+                    optionLabelField="name"
+                    optionValueField="uid"
+                    required="1" />
+        </div>
+    </div>
+</div>
+
+<div class="input-flex">
+    <div>
+        <div class="input-select">
+            <label for="position"><f:translate key="tx_cfajob_domain_model_position" /><span class="required"> *</span> :</label>
+            <f:form.select
+                    id="position"
+                    property="position"
+                    options="{positions}"
+                    prependOptionLabel="{f:translate(id:'tx_cfajob.please_select')}"
+                    optionLabelField="name"
+                    optionValueField="uid"
+                    required="1" />
+        </div>
+    </div>
+</div>
+
+<div class="input-flex">
+    <div>
+        <label for="about"><f:translate key="tx_cfajob_domain_model_frontenduser.about" /></label>
+        <f:form.textarea id="about" property="about" />
+    </div>
+</div>
+
+</html>

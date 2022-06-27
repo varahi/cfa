@@ -1,0 +1,18 @@
+# cat=basic/enable; type=int; label=Front end user offer pid (Page ID)
+userOfferPid = 0
+
+# cat=basic/enable; type=int; label=Front end user resume pid (Page ID)
+userResumePid = 0
+
+# cat=basic/enable; type=int; label=Main storage pid (Page ID)
+storagePid = 0
+
+# cat=Recaptcha Settings; type=boolean; label=Use Recaptcha;
+use_recaptcha = 0
+
+# cat=Recaptcha Settings ; type=string; label=Client key;
+### recaptcha_data_sitekey
+recaptcha_client_key =
+
+# cat=Recaptcha Settings ; type=string; label=Secret key;
+recaptcha_secret_key =

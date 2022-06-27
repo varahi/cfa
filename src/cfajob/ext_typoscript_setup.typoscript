@@ -1,0 +1,40 @@
+config.tx_extbase {
+  persistence {
+    classes {
+
+      T3Dev\Trainingcaces\Domain\Model\FileReference {
+        mapping {
+          tableName = sys_file_reference
+        }
+      }
+
+      TYPO3\CMS\Extbase\Domain\Model\FrontendUser {
+        subclasses {
+          Tx_Trainingcaces_User = T3Dev\Cfajob\Domain\Model\FrontendUser
+        }
+      }
+      T3Dev\Trainingcaces\Domain\Model\FrontendUser  {
+        mapping {
+          tableName = fe_users
+          recordType =
+        }
+      }
+      T3Dev\Trainingcaces\Domain\Model\FrontendUserGroup  {
+        mapping {
+          tableName = fe_groups
+        }
+      }
+
+      T3Dev\Cfajob\Domain\Model\Category {
+        mapping {
+          tableName = sys_category
+          columns {
+            parent.mapOnProperty = parentcategory
+          }
+
+        }
+      }
+
+    }
+  }
+}

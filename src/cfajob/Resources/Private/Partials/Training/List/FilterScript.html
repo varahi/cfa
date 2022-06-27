@@ -1,0 +1,41 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<script>
+
+    $(document).ready(function(){
+
+        $('input.custom-checkbox').iCheck('destroy');
+
+        //$('input.some').iCheck({
+            // разные опции
+        //});
+
+        var chosen = "";
+        var $items = jQuery('.item');
+        var $cats = jQuery('#list-category input[type=checkbox]');
+
+        $cats.on('change', function (e) {
+            var cats = $cats.filter(':checked').map(function(){
+                return 'cat-' + (this.value || '')
+            }).get();
+            if(cats.length){
+                var $fitems = $items;
+                var addchosen = "";
+                if (chosen) {
+                    addchosen =', .' + chosen;
+                }
+                if(cats.length){
+                    $fitems = $fitems.filter('.' + cats.join(', .') + addchosen );
+                }
+                $fitems.show('slow');
+                $items.not($fitems).hide('slow');
+            } else {
+                $items.show('slow');
+            }
+        });
+
+    });
+
+</script>
+
+</html>

@@ -1,0 +1,106 @@
+# Load default processing options
+imports:
+  - { resource: "EXT:rte_ckeditor/Configuration/RTE/Processing.yaml" }
+  - { resource: "EXT:rte_ckeditor/Configuration/RTE/Editor/Base.yaml" }
+  - { resource: "EXT:rte_ckeditor/Configuration/RTE/Editor/Plugins.yaml" }
+
+# Add configuration for the editor
+# For complete documentation see http://docs.ckeditor.com/#!/api/CKEDITOR.config
+editor:
+  config:
+    contentsCss: "EXT:pimentconfig/Resources/Public/Styles/rte.css"
+    entities: 'false'
+    allowedContent: true
+    format_tags: "p;h1;h2;h3;h4;h5;pre"
+
+    stylesSet:
+      - { name: "Lead", element: "p", attributes: { 'class': 'lead' } }
+      - { name: "Table", element: "table", attributes: { 'class': 'table table-hover' } }
+      - { name: "Table Striped", element: "table", attributes: { 'class': 'table table-hover table-striped' } }
+      - { name: "Table Bordered", element: "table", attributes: { 'class': 'table table-hover table-bordered' } }
+      - { name: "Table Condensed", element: "table", attributes: { 'class': 'table table-hover table-condensed' } }
+      - { name: "Row Active", element: "tr", attributes: { 'class': 'active' } }
+      - { name: "Row Success", element: "tr", attributes: { 'class': 'success' } }
+      - { name: "Row Info", element: "tr", attributes: { 'class': 'info' } }
+      - { name: "Row Warning", element: "tr", attributes: { 'class': 'warning' } }
+      - { name: "Row Danger", element: "tr", attributes: { 'class': 'danger' } }
+      - { name: "Button Default", element: "a", attributes: { 'class': 'btn btn-default' } }
+      - { name: "Button Primary", element: "a", attributes: { 'class': 'btn btn-primary' } }
+      - { name: "Button Success", element: "a", attributes: { 'class': 'btn btn-success' } }
+      - { name: "Button Info", element: "a", attributes: { 'class': 'btn btn-info' } }
+      - { name: "Button Warning", element: "a", attributes: { 'class': 'btn btn-warning' } }
+      - { name: "Button Danger", element: "a", attributes: { 'class': 'btn btn-danger' } }
+      - { name: "Button Rouge", element: "a", attributes: { 'class': 'bt-red' } }
+      - { name: "Button Noir", element: "a", attributes: { 'class': 'bt-black' } }
+      - { name: "Button Violet", element: "a", attributes: { 'class': 'bt-pink' } }
+      - { name: "Button Vert", element: "a", attributes: { 'class': 'bt-green' } }
+      - { name: "Button Gris", element: "a", attributes: { 'class': 'bt-grey' } }
+      - { name: "Titre p", element: "p", attributes: { 'class': 'title' } }
+      - { name: "Span", element: "span", attributes: { 'class': 'span-tag' } }
+      - { name: "Texte violet", element: "p", attributes: { 'class': 'txt-pink' } }
+      - { name: "Texte violet span", element: "span", attributes: { 'class': 'txt-pink' } }
+      - { name: "Texte violet li", element: "li", attributes: { 'class': 'txt-pink' } }
+      - { name: "Texte violet a", element: "a", attributes: { 'class': 'txt-pink' } }
+      - { name: "Texte bleu", element: "p", attributes: { 'class': 'txt-blue' } }
+      - { name: "Texte bleu span", element: "span", attributes: { 'class': 'txt-blue' } }
+      - { name: "Texte bleu li", element: "li", attributes: { 'class': 'txt-blue' } }
+      - { name: "Texte bleu a", element: "a", attributes: { 'class': 'txt-blue' } }
+      - { name: "Texte jaune", element: "p", attributes: { 'class': 'txt-yellow' } }
+      - { name: "Texte jaune span", element: "span", attributes: { 'class': 'txt-yellow' } }
+      - { name: "Texte jaune li", element: "li", attributes: { 'class': 'txt-yellow' } }
+      - { name: "Texte jaune a", element: "a", attributes: { 'class': 'txt-yellow' } }
+      - { name: "Texte vert", element: "p", attributes: { 'class': 'txt-green' } }
+      - { name: "Texte vert span", element: "span", attributes: { 'class': 'txt-green' } }
+      - { name: "Texte vert li", element: "li", attributes: { 'class': 'txt-green' } }
+      - { name: "Texte vert a", element: "a", attributes: { 'class': 'txt-green' } }
+      - { name: "Mail", element: "p", attributes: { 'class': 'txt-mail' } }
+      - { name: "Mail petit", element: "p", attributes: { 'class': 'txt-mail-small' } }
+      - { name: "Téléphone", element: "p", attributes: { 'class': 'txt-phone' } }
+      - { name: "Téléphone petit", element: "p", attributes: { 'class': 'txt-phone-small' } }
+      - { name: "Utilisateur petit", element: "p", attributes: { 'class': 'txt-user-small' } }
+      - { name: "Fax petit", element: "p", attributes: { 'class': 'txt-fax-small' } }
+      - { name: "Horaire petit", element: "p", attributes: { 'class': 'txt-time-small' } }
+      - { name: "localisation violet", element: "div", attributes: { 'class': 'pointer-pink' } }
+      - { name: "localisation bleu", element: "div", attributes: { 'class': 'pointer-blue' } }
+      - { name: "localisation jaune", element: "div", attributes: { 'class': 'pointer-yellow' } }
+      - { name: "Bloc vert", element: "div", attributes: { 'class': 'block-green2' } }
+
+    toolbarGroups:
+      - { name: clipboard, groups: [clipboard, undo] }
+      - { name: editing,   groups: [find, selection, spellchecker] }
+      - { name: links }
+      - { name: insert }
+      - { name: tools }
+      - { name: table }
+      - { name: tabletools }
+      - { name: document,  groups: [ mode, document, doctools ] }
+      - { name: others }
+      - "/"
+      - { name: basicstyles, groups: [ basicstyles, align, cleanup ] }
+      - { name: paragraph,   groups: [ list, indent, blocks, align, bidi ] }
+      - { name: specialcharacters,   groups: [ insertcharacters ] }
+      - "/"
+      - { name: styles }
+
+    justifyClasses:
+      - text-left
+      - text-center
+      - text-right
+      - text-justify
+
+    extraPlugins:
+      - justify
+      - font
+      - find
+      - bidi
+      - selectall
+      - autolink
+      - wordcount
+
+    removePlugins:
+      - image
+
+    removeButtons:
+
+    # Limit the height of the editor
+    height: 500

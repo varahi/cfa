@@ -1,0 +1,71 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+	  xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
+	  xmlns:rx="http://typo3.org/ns/Reelworx/RxShariff/ViewHelper"
+	  data-namespace-typo3-fluid="true">
+
+<f:layout name="Detail" />
+
+<!--
+	=====================
+		News/Detail.html
+-->
+
+<f:section name="content">
+	<f:if condition="{newsItem}">
+		<f:then>
+			<n:format.nothing>
+				<n:excludeDisplayedNews newsItem="{newsItem}" />
+				<f:if condition="{newsItem.alternativeTitle}">
+					<f:then>
+						<n:titleTag>
+							<f:format.htmlentitiesDecode>{newsItem.alternativeTitle}</f:format.htmlentitiesDecode>
+						</n:titleTag>
+					</f:then>
+					<f:else>
+						<n:titleTag>
+							<f:format.htmlentitiesDecode>{newsItem.title}</f:format.htmlentitiesDecode>
+						</n:titleTag>
+					</f:else>
+				</f:if>
+				<f:render partial="Detail/Opengraph" arguments="{newsItem: newsItem, settings:settings}" />
+			</n:format.nothing>
+			<h2>{newsItem.title}</h2>
+			<f:if condition="{settings.backPid}">
+				<!-- Link Back -->
+				<div class="news-backlink-wrap">
+					<f:link.page pageUid="{settings.backPid}">
+						< <f:translate key="back-link" />
+					</f:link.page>
+				</div>
+			</f:if>
+			<p class="date"><f:format.date format="%d.%m.%Y">{newsItem.datetime}</f:format.date></p>
+			<div class="content-news">
+				<f:if condition="{newsItem.mediaNonPreviews}">
+				<div class="left-news">
+				<n:renderMedia news="{newsItem}" imgClass="img-responsive" videoClass="video-wrapper" audioClass="audio-wrapper">
+					
+					<f:if condition="{newsItem.contentElements}">
+						<!-- content elements -->
+						<f:cObject typoscriptObjectPath="lib.tx_news.contentElementRendering">{newsItem.contentElementIdList}</f:cObject>
+					</f:if>
+					<!-- main text -->
+					<div class="news-text-wrap" itemprop="articleBody">
+						<f:format.html>{newsItem.bodytext}</f:format.html>
+					</div>
+				</n:renderMedia>
+				</div>
+				</f:if>
+				<div class="right-news">
+					<div class="slideshow-news">
+						<f:render partial="Detail/MediaContainer" arguments="{media: newsItem.mediaNonPreviews, settings:settings}" />
+					</div>
+				</div>
+			</div>
+
+		</f:then>
+		<f:else>
+
+		</f:else>
+	</f:if>
+</f:section>
+</html>

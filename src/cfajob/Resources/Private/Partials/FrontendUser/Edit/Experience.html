@@ -1,0 +1,59 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+
+<f:if condition="{frontendUser.experience}">
+    <h3><f:translate key="tx_cfajob.user_form.experience_title" /></h3>
+    <div class="_input-label">
+        <f:for each="{frontendUser.experience}" as="experience" key="key" iteration="itemIteration">
+            <div>
+                <b><f:translate key="tx_cfajob.user_form.employer" />:</b> {experience.employeur}
+            </div>
+            <div>
+                <b><f:translate key="tx_cfajob.user_form.position_title" />:</b> {experience.poistion}
+            </div>
+            <div>
+                <b><f:translate key="tx_cfajob.user_form.start_year" />: </b> <f:format.date>{experience.startYear}</f:format.date>
+            </div>
+            <div>
+                <b><f:translate key="tx_cfajob.user_form.end_year" />: </b> <f:format.date>{experience.endYear}</f:format.date>
+            </div>
+            <div>
+                <b><f:translate key="tx_cfajob.user_form.description" />: </b>
+                <f:format.raw>{experience.description}</f:format.raw>
+            </div>
+            <hr />
+        </f:for>
+    </div>
+</f:if>
+
+<div class="input-label"> <label><f:translate key="tx_cfajob.user_form.experience" /></label>
+    <div class="block-script block-experience">
+        <a href="#" class="link-add">+ <f:translate key="tx_cfajob.user_form.add_experience" /></a>
+        <div class="field-hidden">
+            <div>
+                <label for="employeur"><f:translate key="tx_cfajob.user_form.employer" /></label>
+                <input type="text" id="employeur" name="experience[0][employer]"/>
+            </div>
+            <div>
+                <label for="posteExp"><f:translate key="tx_cfajob.user_form.position_title" /></label>
+                <input type="text" id="posteExp" name="experience[0][posteExp]"/>
+            </div>
+            <div class="input-flex">
+                <div>
+                    <label for="dateStartExp"><f:translate key="tx_cfajob.user_form.start_year" /></label>
+                    <input type="date" id="dateStartExp" placeholder="" name="experience[0][dateStartExp]"/>
+                </div>
+                <div>
+                    <label for="dateEndExp"><f:translate key="tx_cfajob.user_form.end_year" /></label>
+                    <input type="date" id="dateEndExp" placeholder="" name="experience[0][dateEndExp]"/>
+                </div>
+            </div>
+            <div>
+                <label for="descriptionExp"><f:translate key="tx_cfajob.user_form.description" /></label>
+                <textarea id="descriptionExp" name="experience[0][descriptionExp]"></textarea>
+            </div>
+            <a href="#" class="link-add">+ <f:translate key="tx_cfajob.user_form.add_experience" /></a> </div>
+    </div>
+</div>
+
+</html>

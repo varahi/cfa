@@ -1,0 +1,638 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="EXT:cfajob/Resources/Private/Language/locallang.xlf" date="2021-04-29T08:03:53Z" product-name="cfajob">
+		<header/>
+		<body>
+			<trans-unit id="tx_cfajob_domain_model_frontenduser" resname="tx_cfajob_domain_model_frontenduser">
+				<source>Frontend User</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_frontenduser.name" resname="tx_cfajob_domain_model_frontenduser.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_frontenduser.first_name" resname="tx_cfajob_domain_model_frontenduser.first_name">
+				<source>First Name</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_frontenduser.last_name" resname="tx_cfajob_domain_model_frontenduser.last_name">
+				<source>Last Name</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_frontenduser.title_c_v" resname="tx_cfajob_domain_model_frontenduser.title_c_v">
+				<source>Title C V</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_frontenduser.about" resname="tx_cfajob_domain_model_frontenduser.about">
+				<source>About</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_frontenduser.company" resname="tx_cfajob_domain_model_frontenduser.company">
+				<source>company</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_frontenduser.contact_person" resname="tx_cfajob_domain_model_frontenduser.contact_person">
+				<source>Contact Person</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_frontenduser.diploma" resname="tx_cfajob_domain_model_frontenduser.diploma">
+				<source>Diploma</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_frontenduser.experience" resname="tx_cfajob_domain_model_frontenduser.experience">
+				<source>Experience</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_frontenduser.location" resname="tx_cfajob_domain_model_frontenduser.location">
+				<source>Location</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_frontenduser.position" resname="tx_cfajob_domain_model_frontenduser.position">
+				<source>Position</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_frontenduser.offer" resname="tx_cfajob_domain_model_frontenduser.offer">
+				<source>Offer</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_diploma" resname="tx_cfajob_domain_model_diploma">
+				<source>Diploma</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_diploma.name" resname="tx_cfajob_domain_model_diploma.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_diploma.diploma" resname="tx_cfajob_domain_model_diploma.diploma">
+				<source>Diploma</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_diploma.start_year" resname="tx_cfajob_domain_model_diploma.start_year">
+				<source>Start Year</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_diploma.end_year" resname="tx_cfajob_domain_model_diploma.end_year">
+				<source>End Year</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_diploma.description" resname="tx_cfajob_domain_model_diploma.description">
+				<source>Description</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_experience" resname="tx_cfajob_domain_model_experience">
+				<source>Experience</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_experience.employeur" resname="tx_cfajob_domain_model_experience.employeur">
+				<source>Employeur</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_experience.position" resname="tx_cfajob_domain_model_experience.position">
+				<source>Position</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_experience.start_year" resname="tx_cfajob_domain_model_experience.start_year">
+				<source>Start Year</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_experience.end_year" resname="tx_cfajob_domain_model_experience.end_year">
+				<source>End Year</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_experience.description" resname="tx_cfajob_domain_model_experience.description">
+				<source>Description</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_location" resname="tx_cfajob_domain_model_location">
+				<source>Location</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_location.name" resname="tx_cfajob_domain_model_location.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_location.city" resname="tx_cfajob_domain_model_location.city">
+				<source>City</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_location.zip" resname="tx_cfajob_domain_model_location.zip">
+				<source>Zip</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_position" resname="tx_cfajob_domain_model_position">
+				<source>Position</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_position.name" resname="tx_cfajob_domain_model_position.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_offer" resname="tx_cfajob_domain_model_offer">
+				<source>Offer</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_offer.name" resname="tx_cfajob_domain_model_offer.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_offer.description" resname="tx_cfajob_domain_model_offer.description">
+				<source>Description</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_offer.email" resname="tx_cfajob_domain_model_offer.email">
+				<source>Email</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_offer.company" resname="tx_cfajob_domain_model_offer.company">
+				<source>Company</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_offer.contact_person" resname="tx_cfajob_domain_model_offer.contact_person">
+				<source>Contact Person</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_offer.site" resname="tx_cfajob_domain_model_offer.site">
+				<source>Site</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_offer.phone" resname="tx_cfajob_domain_model_offer.phone">
+				<source>Phone</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_offer.type" resname="tx_cfajob_domain_model_offer.type">
+				<source>Type</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_offer.city" resname="tx_cfajob_domain_model_offer.city">
+				<source>City</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_offer.zip" resname="tx_cfajob_domain_model_offer.zip">
+				<source>Zip</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_offer.no_offers" resname="tx_cfajob_domain_model_offer.no_offers">
+				<source>There are no offers</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.announcement" resname="tx_cfajob.announcement">
+				<source>Announcement</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.contact_person" resname="tx_cfajob.contact_person">
+				<source>Contact Person</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.phone" resname="tx_cfajob.phone">
+				<source>Phone</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.offer.bottom_info_1" resname="tx_cfajob.offer.bottom_info_1">
+				<source>To apply, send your CV and cover letter by e-mail to</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.offer.bottom_info_2" resname="tx_cfajob.offer.bottom_info_2">
+				<source>or click on</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.offer.bottom_info_3" resname="tx_cfajob.offer.bottom_info_3">
+				<source>this link to fill it online</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.offer.add_posted" resname="tx_cfajob.offer.add_posted">
+				<source>Advert posted</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.by_job_type" resname="tx_cfajob.by_job_type">
+				<source>By job type</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.by_city" resname="tx_cfajob.by_city">
+				<source>By city</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.by_zip" resname="tx_cfajob.by_zip">
+				<source>By Postal Code</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.research" resname="tx_cfajob.research">
+				<source>Research</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.search" resname="tx_cfajob.search">
+				<source>Search</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.reset" resname="tx_cfajob.reset">
+				<source>Reset</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.page" resname="tx_cfajob.page">
+				<source>Page</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.post" resname="tx_cfajob.post">
+				<source>The post</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.job_name" resname="tx_cfajob.job_name">
+				<source>Job Name</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.position_type" resname="tx_cfajob.position_type">
+				<source>Position type</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.please_select" resname="tx_cfajob.please_select">
+				<source>Please select</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.job_description" resname="tx_cfajob.job_description">
+				<source>Job description</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.email_url" resname="tx_cfajob.email_url">
+				<source>Email / URL to apply to</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.email" resname="tx_cfajob.email">
+				<source>Email</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.your_society" resname="tx_cfajob.your_society">
+				<source>Your society</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.company_name" resname="tx_cfajob.company_name">
+				<source>Name of contact person</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.website" resname="tx_cfajob.website">
+				<source>Website (optional)</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.http" resname="tx_cfajob.http">
+				<source>http://</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.name_contact_person" resname="tx_cfajob.name_contact_person">
+				<source>Name of contact person</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.phone_number" resname="tx_cfajob.phone_number">
+				<source>Phone number</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.newOffer_form_info" resname="tx_cfajob.newOffer_form_info">
+				<source>Number of the person to contact for any inquiries regarding job offers</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.validate" resname="tx_cfajob.validate">
+				<source>Validate</source>
+			</trans-unit>
+			<trans-unit id="errorStatus" resname="errorStatus">
+				<source>Error</source>
+			</trans-unit>
+			<trans-unit id="okStatus" resname="okStatus">
+				<source>Successfully</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.message.offer_created" resname="tx_cfajob.message.offer_created">
+				<source>Your offer created. After it is confirmed by administrator it will be online</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.message.to_fill_form_please_login" resname="tx_cfajob.message.to_fill_form_please_login">
+				<source>Please login to fill the form</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.message.incorrect_login" resname="tx_cfajob.message.incorrect_login">
+				<source>Please enter correct login or password</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.message.please_login" resname="tx_cfajob.message.please_login">
+				<source>Please login</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.new_offer_subject" resname="tx_cfajob.new_offer_subject">
+				<source>You have new offer from webiste CFA Pharmacie</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.offer_enabled_subject" resname="tx_cfajob.offer_enabled_subject">
+				<source>You enabled offer</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.user_enabled_subject" resname="tx_cfajob.user_enabled_subject">
+				<source>You enabled new user</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.user_deleted_subject" resname="tx_cfajob.user_deleted_subject">
+				<source>You deleted user</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.offer_deleted_subject" resname="tx_cfajob.offer_deleted_subject">
+				<source>You deleted offer</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.new_user_subject" resname="tx_cfajob.new_user_subject">
+				<source>New user registered webiste CFA Pharmacie</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.update_user_subject" resname="tx_cfajob.update_user_subject">
+				<source>User updte resume on webiste CFA Pharmacie</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.user_form.last_name" resname="tx_cfajob.user_form.last_name">
+				<source>Last Name</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.user_form.your_last_name" resname="tx_cfajob.user_form.your_last_name">
+				<source>Your Last Name</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.user_form.first_name" resname="tx_cfajob.user_form.first_name">
+				<source>First Name</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.user_form.your_first_name" resname="tx_cfajob.user_form.your_first_name">
+				<source>Your First Name</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.user_form.your_email" resname="tx_cfajob.user_form.your_email">
+				<source>Your Email</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.user_form.dummy_email" resname="tx_cfajob.user_form.dummy_email">
+				<source>you@domain.com</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.user_form.create_password" resname="tx_cfajob.user_form.create_password">
+				<source>Create password</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.user_form.create_password_placeholder" resname="tx_cfajob.user_form.create_password_placeholder">
+				<source>Lettres, numbers</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.message.user_already_exist" resname="tx_cfajob.message.user_already_exist">
+				<source>This email already exist. Please enter another email.</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.message.user_created" resname="tx_cfajob.message.user_created">
+				<source>User successfully created</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.message.user_updated" resname="tx_cfajob.message.user_updated">
+				<source>User successfully updated</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.user_form.location" resname="tx_cfajob.user_form.location">
+				<source>Location</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.user_form.location_example" resname="tx_cfajob.user_form.location_example">
+				<source>For example Marsel</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.user_form.position" resname="tx_cfajob.user_form.position">
+				<source>Position</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.user_form.choose_category" resname="tx_cfajob.user_form.choose_category">
+				<source>Choose a category</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.user_form.who_are_you" resname="tx_cfajob.user_form.who_are_you">
+				<source>Who are you ?</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.user_form.title_cv" resname="tx_cfajob.user_form.title_cv">
+				<source>Title of your CV</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.user_form.title_cv_example" resname="tx_cfajob.user_form.title_cv_example">
+				<source>ex. : Pharmacy technician</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.user_form.your_course" resname="tx_cfajob.user_form.your_course">
+				<source>Your course (optional)</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.user_form.add_diploma" resname="tx_cfajob.user_form.add_diploma">
+				<source>Add a diploma</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.user_form.facility_name" resname="tx_cfajob.user_form.facility_name">
+				<source>Facility Name</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.user_form.diploma" resname="tx_cfajob.user_form.diploma">
+				<source>Diploma</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.user_form.start_year" resname="tx_cfajob.user_form.start_year">
+				<source>Start Year</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.user_form.end_year" resname="tx_cfajob.user_form.end_year">
+				<source>End Year</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.user_form.description" resname="tx_cfajob.user_form.description">
+				<source>Description</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.dateFormat" resname="tx_cfajob.dateFormat">
+				<source>m/d/Y</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.user_form.experience" resname="tx_cfajob.user_form.experience">
+				<source>Experience (optional)</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.user_form.add_experience" resname="tx_cfajob.user_form.add_experience">
+				<source>Add experience</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.user_form.employer" resname="tx_cfajob.user_form.employer">
+				<source>Employer</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.user_form.position_title" resname="tx_cfajob.user_form.position_title">
+				<source>Poistion title</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.user_form.your_digital_cv" resname="tx_cfajob.user_form.your_digital_cv">
+				<source>Your digital CV</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.user_form.browse" resname="tx_cfajob.user_form.browse">
+				<source>Browse</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.user_form.no_file_selected" resname="tx_cfajob.user_form.no_file_selected">
+				<source>No file selected</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.user_form.file_upload_max" resname="tx_cfajob.user_form.file_upload_max">
+				<source>Maximum 8Mb</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.user_form.cv_visibility" resname="tx_cfajob.user_form.cv_visibility">
+				<source>CV visibility</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.user_form.agree_info" resname="tx_cfajob.user_form.agree_info">
+				<source>By adding your CV, you agree that your data is visible to website visitors.</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.user_form.photo" resname="tx_cfajob.user_form.photo">
+				<source>Photo (optional)</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.file_extension_denied" resname="tx_cfajob.file_extension_denied">
+				<source>Photo (optional)</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.message.file_too_big" resname="tx_cfajob.message.file_too_big">
+				<source>File is too big. Max file upload is 8Mb</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.no_students" resname="tx_cfajob.no_students">
+				<source>There is no students</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.name_last_name" resname="tx_cfajob.name_last_name">
+				<source>Name/Last name</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.memorize" resname="tx_cfajob.memorize">
+				<source>Memorize</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.last_name" resname="tx_cfajob.last_name">
+				<source>Last Name</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.first_name" resname="tx_cfajob.first_name">
+				<source>First Name</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.city" resname="tx_cfajob.city">
+				<source>City</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.position_type_research" resname="tx_cfajob.position_type_research">
+				<source>type of position research</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.download_cv_file" resname="tx_cfajob.download_cv_file">
+				<source>Download my CV in PDF format</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_training" resname="tx_cfajob_domain_model_training">
+				<source>Training</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_training.name" resname="tx_cfajob_domain_model_training.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_training.is_dpc" resname="tx_cfajob_domain_model_training.is_dpc">
+				<source>Is Dpc</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_training.is_new" resname="tx_cfajob_domain_model_training.is_new">
+				<source>Is New</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_training.information" resname="tx_cfajob_domain_model_training.information">
+				<source>Information</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_training.duration" resname="tx_cfajob_domain_model_training.duration">
+				<source>Duration</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_training.whois" resname="tx_cfajob_domain_model_training.whois">
+				<source>Whois</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_training.whoare" resname="tx_cfajob_domain_model_training.whoare">
+				<source>Whoare</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_training.pdf_file" resname="tx_cfajob_domain_model_training.pdf_file">
+				<source>Pdf File</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_training.programm" resname="tx_cfajob_domain_model_training.programm">
+				<source>Programm</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_training.additional_info" resname="tx_cfajob_domain_model_training.additional_info">
+				<source>Additional Info</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_training.city" resname="tx_cfajob_domain_model_training.city">
+				<source>City</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.training.theme" resname="tx_cfajob.training.theme">
+				<source>Theme</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.training.theme_short" resname="tx_cfajob.training.theme_short">
+				<source>Theme</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.training.learn_more" resname="tx_cfajob.training.learn_more">
+				<source>Learn more</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.training.validate_dpc" resname="tx_cfajob.training.validate_dpc">
+				<source>Validate the CPD</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.training.is_new" resname="tx_cfajob.training.is_new">
+				<source>Is new</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.training.whois" resname="tx_cfajob.training.whois">
+				<source>Who is the training for?</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.training.whoare" resname="tx_cfajob.training.whoare">
+				<source>Who are the stakeholders?</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.training.form_goal" resname="tx_cfajob.training.form_goal">
+				<source>Formation's goal</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.training.training_content" resname="tx_cfajob.training.training_content">
+				<source>Training content</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.training.registration_form" resname="tx_cfajob.training.registration_form">
+				<source>Registration form</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.training.programm" resname="tx_cfajob.training.programm">
+				<source>Programm</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.training.date_place" resname="tx_cfajob.training.date_place">
+				<source>Date (s) and place (s) of training</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.training.information_registration" resname="tx_cfajob.training.information_registration">
+				<source>Information and registration</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.detail_cv" resname="tx_cfajob.detail_cv">
+				<source>Detail of the CV</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.back_to_list" resname="tx_cfajob.back_to_list">
+				<source>Back to list</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.message.offer_enabled" resname="tx_cfajob.message.offer_enabled">
+				<source>Offer is enabled</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.message.offer_deleted" resname="tx_cfajob.message.offer_deleted">
+				<source>Offer deleted</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.message.user_deleted" resname="tx_cfajob.message.user_deleted">
+				<source>User deleted</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.message.incorrect_link" resname="tx_cfajob.message.incorrect_link">
+				<source>You use incorrect link</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.message.user_enabled" resname="tx_cfajob.message.user_enabled">
+				<source>New user is enabled</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.message.error_has_occurred" resname="tx_cfajob.message.error_has_occurred">
+				<source>An error has occurred !</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.user_profile" resname="tx_cfajob.user_profile">
+				<source>User profile</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.go_user_profile" resname="tx_cfajob.go_user_profile">
+				<source>Go to user profile</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.profile_updated" resname="tx_cfajob.profile_updated">
+				<source>Your profile updated</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.short_password" resname="tx_cfajob.short_password">
+				<source>Password is too short and should be at least 6 symbols</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.user_form.remove_image" resname="tx_cfajob.user_form.remove_image">
+				<source>Remove image</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.user_form.remove_file" resname="tx_cfajob.user_form.remove_file">
+				<source>Remove file</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.user_form.readonly" resname="tx_cfajob.user_form.readonly">
+				<source>Read only</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.user_form.can_changed" resname="tx_cfajob.user_form.can_changed">
+				<source>Can be changed</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.user_form.experience_title" resname="tx_cfajob.user_form.experience_title">
+				<source>Experience</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.user_form.your_course_title" resname="tx_cfajob.user_form.your_course_title">
+				<source>Your course</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.user_form.remove_diplome" resname="tx_cfajob.user_form.remove_diplome">
+				<source>Remove diplome</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.user_form.wrong_captcha" resname="tx_cfajob.user_form.wrong_captcha">
+				<source>Wrong captcha</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_user" resname="tx_cfajob_domain_model_user">
+				<source>User</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_user.username" resname="tx_cfajob_domain_model_user.username">
+				<source>Username</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_user.password" resname="tx_cfajob_domain_model_user.password">
+				<source>Password</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_user.password_repeat" resname="tx_cfajob_domain_model_user.password_repeat">
+				<source>Repeat Password</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_user.usergroup" resname="tx_cfajob_domain_model_user.usergroup">
+				<source>Usergroup</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_user.name" resname="tx_cfajob_domain_model_user.name">
+				<source>Full Name</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_user.email" resname="tx_cfajob_domain_model_user.email">
+				<source>Email</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_user.lastlogin" resname="tx_cfajob_domain_model_user.lastlogin">
+				<source>Last login</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_user.crdate" resname="tx_cfajob_domain_model_user.crdate">
+				<source>Creation Time</source>
+			</trans-unit>
+			<trans-unit id="BackendListUserEdit" resname="BackendListUserEdit">
+				<source>Edit</source>
+			</trans-unit>
+			<trans-unit id="BackendListUserLogout" resname="BackendListUserLogout">
+				<source>Logout</source>
+			</trans-unit>
+			<trans-unit id="BackendListUserStatusOffline" resname="BackendListUserStatusOffline">
+				<source>Offline</source>
+			</trans-unit>
+			<trans-unit id="BackendListUserStatusOnline" resname="BackendListUserStatusOnline">
+				<source>Online</source>
+			</trans-unit>
+			<trans-unit id="BackendListUserVisibilityHide" resname="BackendListUserVisibilityHide">
+				<source>Disable</source>
+			</trans-unit>
+			<trans-unit id="BackendListUserVisibilityHidden" resname="BackendListUserVisibilityHidden">
+				<source>Hidden</source>
+			</trans-unit>
+			<trans-unit id="BackendListUserVisibilityUnhide" resname="BackendListUserVisibilityUnhide">
+				<source>Enable</source>
+			</trans-unit>
+			<trans-unit id="BackendListFilterLabel" resname="BackendListFilterLabel">
+				<source>Search</source>
+			</trans-unit>
+			<trans-unit id="BackendListLoginAs" resname="BackendListLoginAs">
+				<source>Login as</source>
+			</trans-unit>
+			<trans-unit id="BackendConfirmationNoteTitle" resname="BackendConfirmationNoteTitle">
+				<source>Possible action:</source>
+			</trans-unit>
+			<trans-unit id="BackendConfirmationNoteText" resname="BackendConfirmationNoteText">
+				<source>%s missing user confirmation(s) available</source>
+			</trans-unit>
+			<trans-unit id="BackendConfirmationColumnAction" resname="BackendConfirmationColumnAction">
+				<source>Actions</source>
+			</trans-unit>
+			<trans-unit id="BackendMissingConfigPID" resname="BackendMissingConfigPID">
+				<source>The config PID is missing!</source>
+			</trans-unit>
+			<trans-unit id="BackendConfirmationColumnUid" resname="BackendConfirmationColumnUid">
+				<source>UID</source>
+			</trans-unit>
+			<trans-unit id="BackendConfirmationFlashMessageConfirmed" resname="BackendConfirmationFlashMessageConfirmed">
+				<source>%s was successfully approved</source>
+			</trans-unit>
+			<trans-unit id="BackendConfirmationFlashMessageFailed" resname="BackendConfirmationFlashMessageFailed">
+				<source>The user confirmation failed, please check your system log or check your config</source>
+			</trans-unit>
+			<trans-unit id="BackendConfirmationFlashMessageRefused" resname="BackendConfirmationFlashMessageRefused">
+				<source>%s was refused</source>
+			</trans-unit>
+			<trans-unit id="BackendConfirmationResendUserConfirmationRequest" resname="BackendConfirmationResendUserConfirmationRequest">
+				<source>resend user confirmation e-mail</source>
+			</trans-unit>
+			<trans-unit id="BackendConfirmationFlashMessageReSend" resname="BackendConfirmationFlashMessageReSend">
+				<source>%s confirmation mail was resend</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_validator.newOffer.email.1221559976" resname="tx_cfajob_validator.newOffer.email.1221559976">
+				<source>The given subject was not a valid email address.</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_validator.newOffer.zip.1221563685" resname="tx_cfajob_validator.newOffer.zip.1221563685">
+				<source>The given subject was not a valid number for code postal.</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.message.city_contain_numbers" resname="tx_cfajob.message.city_contain_numbers">
+				<source>City name must not contain numbers.</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.paginator.first_page" resname="tx_cfajob.paginator.first_page">
+				<source>First page</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob.paginator.last_page" resname="tx_cfajob.paginator.last_page">
+				<source>Last page</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

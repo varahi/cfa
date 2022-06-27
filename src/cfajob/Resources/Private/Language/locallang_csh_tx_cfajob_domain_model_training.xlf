@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="EXT:cfajob/Resources/Private/Language/locallang_csh" date="2020-09-04T15:55:58Z" product-name="cfajob">
+		<header/>
+		<body>
+			<trans-unit id="name.description" resname="name.description">
+				<source>name</source>
+			</trans-unit>
+			<trans-unit id="is_dpc.description" resname="is_dpc.description">
+				<source>isDpc</source>
+			</trans-unit>
+			<trans-unit id="is_new.description" resname="is_new.description">
+				<source>isNew</source>
+			</trans-unit>
+			<trans-unit id="information.description" resname="information.description">
+				<source>information</source>
+			</trans-unit>
+			<trans-unit id="duration.description" resname="duration.description">
+				<source>duration</source>
+			</trans-unit>
+			<trans-unit id="whois.description" resname="whois.description">
+				<source>whois</source>
+			</trans-unit>
+			<trans-unit id="whoare.description" resname="whoare.description">
+				<source>whoare</source>
+			</trans-unit>
+			<trans-unit id="pdf_file.description" resname="pdf_file.description">
+				<source>pdfFile</source>
+			</trans-unit>
+			<trans-unit id="programm.description" resname="programm.description">
+				<source>programm</source>
+			</trans-unit>
+			<trans-unit id="additional_info.description" resname="additional_info.description">
+				<source>additionalInfo</source>
+			</trans-unit>
+			<trans-unit id="city.description" resname="city.description">
+				<source>city</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

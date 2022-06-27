@@ -1,0 +1,59 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:section name="diploma">
+    <f:if condition="{user.diploma}">
+        <div class="relations">
+            <f:for each="{user.diploma}" as="diploma" key="key" iteration="itemIteration">
+                <div class="row">
+                    <div class="col-md-3">
+                        <span class="txt-pink bold">{diploma.name}</span>
+                    </div>
+                    <div class="col-md-9">
+                        <f:if condition="{diploma.diploma}">
+                            <div class="detail-info bold">{diploma.diploma}</div>
+                        </f:if>
+                        <f:if condition="{diploma.startYear}">
+                            <span class="detail-info">{f:format.date(format: 'd/m/Y', date: '{diploma.startYear}')}</span>
+                            <f:if condition="{diploma.endYear}">
+                                - <span class="detail-info">{f:format.date(format: 'd/m/Y', date: '{diploma.endYear}')}</span>
+                            </f:if>
+                        </f:if>
+                        <f:if condition="{diploma.description}">
+                            <p><f:format.raw><f:format.nl2br>{diploma.description}</f:format.nl2br></f:format.raw></p>
+                        </f:if>
+                    </div>
+                </div>
+            </f:for>
+        </div>
+    </f:if>
+</f:section>
+
+<f:section name="experience">
+    <f:if condition="{user.experience}">
+        <div class="relations">
+            <f:for each="{user.experience}" as="experience" key="key" iteration="itemIteration">
+                <div class="row">
+                    <div class="col-md-3">
+                        <span class="txt-pink bold">{experience.employeur}</span>
+                    </div>
+                    <div class="col-md-9">
+                        <f:if condition="{experience.position}">
+                            <div class="detail-info bold">{experience.poistion}</div>
+                        </f:if>
+                        <f:if condition="{experience.startYear}">
+                            <span class="detail-info">{f:format.date(format: 'd/m/Y', date: '{experience.startYear}')}</span>
+                            <f:if condition="{experience.endYear}">
+                                - <span class="detail-info">{f:format.date(format: 'd/m/Y', date: '{experience.endYear}')}</span>
+                            </f:if>
+                        </f:if>
+                        <f:if condition="{experience.description}">
+                            <p><f:format.raw><f:format.nl2br>{experience.description}</f:format.nl2br></f:format.raw></p>
+                        </f:if>
+                    </div>
+                </div>
+            </f:for>
+        </div>
+    </f:if>
+</f:section>
+
+</html>

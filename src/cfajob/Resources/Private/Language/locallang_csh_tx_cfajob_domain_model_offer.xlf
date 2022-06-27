@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="EXT:cfajob/Resources/Private/Language/locallang_csh" date="2020-08-11T10:55:33Z" product-name="cfajob">
+		<header/>
+		<body>
+			<trans-unit id="name.description" resname="name.description">
+				<source>name</source>
+			</trans-unit>
+			<trans-unit id="description.description" resname="description.description">
+				<source>description</source>
+			</trans-unit>
+			<trans-unit id="email.description" resname="email.description">
+				<source>email</source>
+			</trans-unit>
+			<trans-unit id="company.description" resname="company.description">
+				<source>company</source>
+			</trans-unit>
+			<trans-unit id="contact_person.description" resname="contact_person.description">
+				<source>contactPerson</source>
+			</trans-unit>
+			<trans-unit id="site.description" resname="site.description">
+				<source>site</source>
+			</trans-unit>
+			<trans-unit id="phone.description" resname="phone.description">
+				<source>phone</source>
+			</trans-unit>
+			<trans-unit id="type.description" resname="type.description">
+				<source>type</source>
+			</trans-unit>
+			<trans-unit id="city.description" resname="city.description">
+				<source>city</source>
+			</trans-unit>
+			<trans-unit id="zip.description" resname="zip.description">
+				<source>zip</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

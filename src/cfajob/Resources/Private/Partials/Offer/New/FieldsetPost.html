@@ -1,0 +1,42 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<legend><f:translate key="tx_cfajob.post" /></legend>
+<div class="input-flex">
+    <div>
+        <label for="nom"><f:translate key="tx_cfajob.job_name" /> *</label>
+        <f:form.textfield id="nom" property="name" required="1" placeholder="{f:translate(key:'tx_cfajob.job_name')}" />
+    </div>
+    <div>
+        <label for="type"><f:translate key="tx_cfajob.position_type" /> *</label>
+        <div class="input-select">
+            <f:form.select
+                    id="type"
+                    property="type"
+                    options="{positions}"
+                    prependOptionLabel="{f:translate(id:'tx_cfajob.please_select')}"
+                    optionLabelField="name"
+                    optionValueField="uid"
+                    required="1" />
+        </div>
+    </div>
+</div>
+<div class="input-flex">
+    <div>
+        <label for="lieu"><f:translate key="tx_cfajob_domain_model_offer.city" /> *</label>
+        <input placeholder="{f:translate(key:'tx_cfajob_domain_model_offer.city')}" id="lieu" type="text" name="city" required="required">
+    </div>
+    <div>
+        <label for="postal"><f:translate key="tx_cfajob_domain_model_location.zip" /> *</label>
+        <f:form.textfield id="postal" property="zip" required="1" placeholder="{f:translate(key:'tx_cfajob_domain_model_location.zip')}" />
+    </div>
+</div>
+<div>
+    <label for="perso"><f:translate key="tx_cfajob.job_description" /> *</label>
+    <f:form.textarea id="perso" required="true" property="description" readonly="{readonly}" />
+</div>
+<div>
+    <label for="url"><f:translate key="tx_cfajob.email_url" /> *</label>
+    <f:form.textfield id="url" property="email" required="1" placeholder="{f:translate(key:'tx_cfajob.email')}" type="mail" />
+</div>
+
+</html>

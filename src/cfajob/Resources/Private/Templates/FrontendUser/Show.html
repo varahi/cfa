@@ -1,0 +1,46 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+
+<f:section name="content">
+
+    <f:flashMessages />
+
+    <div class="row">
+        <div class="col-md-6">
+            <header><h2><f:translate key="tx_cfajob.detail_cv" /></h2></header>
+            <f:render partial="FrontendUser/Detail/MainInfo" arguments="{_all}" section="main-info" />
+        </div>
+        <div class="col-md-2">
+            <div class="return-link">
+                <f:link.page pageUid="{settings.returnPage}" class="txt-pink"><f:translate key="tx_cfajob.back_to_list" /></f:link.page>
+            </div>
+            <f:if condition="{user.photo}">
+                <div class="detail-image">
+                    <f:for each="{user.photo}" as="image" iteration="itemIteration">
+                        <a class="fancybox" data-fancybox="fancybox[{user.uid}]" href="{f:uri.image(image:image, treatIdAsReference:1 maxWidth:'1000')}">
+                            <f:image image="{image}" width="300c" height="300c" title="{user.firstName} {user.lastName}" alt="{user.firstName} {user.lastName}" />
+                        </a>
+                    </f:for>
+                </div>
+            </f:if>
+        </div>
+    </div>
+
+    <f:render partial="FrontendUser/Detail/MainInfo" arguments="{_all}" section="additional-info" />
+    <div class="detail-extended-info">
+        <f:render partial="FrontendUser/Detail/Relations" arguments="{_all}" section="diploma" />
+        <f:render partial="FrontendUser/Detail/Relations" arguments="{_all}" section="experience" />
+    </div>
+
+    <f:if condition="{user.cvfile}">
+        <div class="download-link">
+            <f:for each="{user.cvfile}" as="file" iteration="itemIteration">
+                <a href="{file.originalResource.publicUrl}" target="_blank" download="{file.originalResource.title}">
+                    <f:translate key="tx_cfajob.download_cv_file" /> <span class="uppercase">{file.originalResource.originalFile.properties.extension}</span>
+                </a>
+            </f:for>
+        </div>
+    </f:if>
+
+</f:section>
+</html>

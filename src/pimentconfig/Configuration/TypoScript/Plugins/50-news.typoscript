@@ -1,0 +1,5 @@
+#@import 'EXT:news/Configuration/TypoScript/setup.txt'
+
+plugin.tx_news.view.templateRootPath = EXT:pimentconfig/Resources/Private/Extensions/News/Private/Templates/
+plugin.tx_news.view.partialRootPath = EXT:pimentconfig/Resources/Private/Extensions/News/Private/Partials/
+plugin.tx_news.view.layoutRootPath = EXT:pimentconfig/Resources/Private/Extensions/News/Private/Layouts/

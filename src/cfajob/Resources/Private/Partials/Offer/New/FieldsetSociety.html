@@ -1,0 +1,26 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<legend><f:translate key="tx_cfajob.your_society" /></legend>
+<div class="input-flex">
+    <div>
+        <label for="nomSoc"><f:translate key="tx_cfajob.company_name" /> *</label>
+        <f:form.textfield id="nomSoc" name="company" required="1" placeholder="{f:translate(key:'tx_cfajob.company_name')}" />
+    </div>
+    <div>
+        <label for="internet"><f:translate key="tx_cfajob.website" /></label>
+        <f:form.textfield id="internet" property="site" placeholder="{f:translate(key:'tx_cfajob.http')}" type="url" />
+    </div>
+</div>
+<div class="input-flex">
+    <div>
+        <label for="nomPer"><f:translate key="tx_cfajob.name_contact_person" /> *</label>
+        <f:form.textfield id="nomPer" property="contactPerson" placeholder="{f:translate(key:'tx_cfajob.name_contact_person')}" required="1" />
+    </div>
+    <div>
+        <label for="telPer"><f:translate key="tx_cfajob.phone_number" /> *</label>
+        <f:form.textfield id="telPer" property="phone" placeholder="{f:translate(key:'tx_cfajob.phone')}" required="1" />
+        <small><f:translate key="tx_cfajob.newOffer_form_info" /></small>
+    </div>
+</div>
+
+</html>

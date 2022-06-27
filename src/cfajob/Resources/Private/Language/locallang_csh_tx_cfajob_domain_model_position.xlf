@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="EXT:cfajob/Resources/Private/Language/locallang_csh" date="2020-08-11T10:55:33Z" product-name="cfajob">
+		<header/>
+		<body>
+			<trans-unit id="name.description" resname="name.description">
+				<source>name</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

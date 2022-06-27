@@ -1,0 +1,98 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+
+<f:section name="content">
+
+    <f:if condition="{training.name}">
+        <header><h2 class="">{training.name}</h2></header>
+    </f:if>
+
+    <div class="detail-formation">
+        <div class="left">
+            <f:render partial="Training/Properties" arguments="{training:training}" section="button" />
+            <div class="top">
+                <f:if condition="{training.categories}">
+                    <p class="txt-green">
+                        <strong><f:translate key="tx_cfajob.training.theme_short" /> :
+                            <f:render partial="Training/Properties" arguments="{training:training}" section="categories" />
+                        </strong>
+                    </p>
+                </f:if>
+                <p>&nbsp;</p>
+                <f:if condition="{training.information}">
+                    <p>
+                        <strong><f:translate key="tx_cfajob.training.form_goal" /></strong><br>
+                        <f:format.raw>{training.information}</f:format.raw>
+                    </p>
+                </f:if>
+                <p>&nbsp;</p>
+                <f:if condition="{training.duration}">
+                    <p class="txt-green">
+                        <strong>{training.duration}</strong>
+                    </p>
+                </f:if>
+                <p>&nbsp;</p>
+                <div class="row">
+                    <div class="col-xs-12 col-md-6">
+                        <f:if condition="{training.whois}">
+                            <p>
+                                <strong><f:translate key="tx_cfajob.training.whois" /></strong><br>
+                                <f:format.raw>{training.whois}</f:format.raw>
+                            </p>
+                        </f:if>
+                    </div>
+                    <div class="col-xs-12 col-md-6">
+                        <f:if condition="{training.whoare}">
+                            <p class="txt-green">
+                                <strong><f:translate key="tx_cfajob.training.whoare" /></strong><br>
+                                <f:format.raw>{training.whoare}</f:format.raw>
+                            </p>
+                        </f:if>
+                    </div>
+                </div>
+                <p>&nbsp;</p>
+                <p>
+                    <f:if condition="{training.courseFile}">
+                        <a href="{training.courseFile.originalResource.publicUrl}"
+                           class="bt-pdf" download="{training.courseFile.name}">
+                            <f:translate key="tx_cfajob.training.training_content" />
+                        </a>
+                    </f:if>
+                    <f:if condition="{training.registrationFile}">
+                        <a href="{training.registrationFile.originalResource.publicUrl}"
+                           class="bt-pdf" download="{training.registrationFile.name}">
+                            <f:translate key="tx_cfajob.training.registration_form" />
+                        </a>
+                    </f:if>
+                </p>
+                <p>&nbsp</p>
+                <f:if condition="{training.programm}">
+                    <p><strong><f:translate key="tx_cfajob.training.programm" /></strong><br></p>
+                    <f:format.raw>{training.programm}</f:format.raw>
+                </f:if>
+            </div>
+        </div>
+        <div class="right">
+            <f:render partial="Training/Properties" arguments="{training:training}" section="detail_image" />
+                <div class="bottom">
+                <p> <strong><f:translate key="tx_cfajob.training.date_place" /> :</strong></p>
+                <f:if condition="{training.city}">
+                    <p class="txt-pink">
+                        <strong>{training.city.name}</strong>
+                    </p>
+                </f:if>
+                <f:if condition="{training.additionalInfo}">
+                   <f:format.raw>{training.additionalInfo}</f:format.raw>
+                </f:if>
+            </div>
+            <div class="block-green">
+                <p>
+                    <strong><f:translate key="tx_cfajob.training.information_registration" /> :</strong><br>
+                    <f:cObject typoscriptObjectPath="lib.information" />
+                </p>
+            </div>
+        </div>
+    </div>
+
+</f:section>
+</html>

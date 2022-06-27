@@ -1,0 +1,67 @@
+plugin.tx_cfajob {
+  settings {
+    loginPage = 42
+    offerListPage = 41
+    userListPage = 42
+    user {
+      new {
+        formPage = 31
+        // Default password for new user
+        defaultPassword = 12345
+      }
+      mail {
+        defaultSender = noreply@dev-cfapharmacie.dyndns.org
+        reciever =  dev@pimentrouge.fr
+      }
+    }
+    groups {
+      diplome = 1
+      entreprise = 2
+    }
+    pagination {
+      itemsPerPage = {$plugin.tx_cfajob.pagination.itemsPerPage}
+      #insertAbove = {$plugin.tx_cfajob.pagination.insertAbove}
+      #insertBelow = {$plugin.tx_cfajob.pagination.insertBelow}
+      #maximumNumberOfLinks = {$plugin.tx_cfajob.pagination.maximumNumberOfLinks}
+    }
+    offer {
+      pageOfferForm = 1
+      offerEmail = pharmacietaleb@orange.fr
+      mail {
+        defaultSender = noreply@dev-cfapharmacie.dyndns.org
+        //reciever =  noreply@dev-cfapharmacie.dyndns.org
+          reciever = dev@pimentrouge.fr
+      }
+    }
+    validation {
+      image {
+        # upload allowed mime types comma separated
+        types = image/jpeg, image/jpg, image/png, image/gif, application/pdf
+        # extensions = jpg, png, gif
+        extensions = jpg,jpeg,png,gif,pdf,doc,docx,tif,tiff,zip,rar
+        # upload max size 500 kb
+        maxSize = 512000
+        # upload max size 1M
+        maxSize = 1024000
+        # Max size for js validation
+        max = 1024
+      }
+      minPasswordLenght = 6
+    }
+    upload {
+      maxFiles = 1
+      temp = /typo3temp/tx_cfajob
+      storage = 1:tx_cfajob/students
+      userdir = /fileadmin/tx_cfajob/students
+    }
+    training {
+      list {
+        dummyImage = Images/image-formation-liste.jpg
+      }
+      detail {
+        dummyImage = Images/image-formation-detail.jpg
+      }
+    }
+  }
+}
+

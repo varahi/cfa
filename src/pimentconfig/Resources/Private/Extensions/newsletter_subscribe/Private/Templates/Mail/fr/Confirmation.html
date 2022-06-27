@@ -1,0 +1,30 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers"
+      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+      xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
+      xmlns:t="Helhum\TyposcriptRendering\ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+
+<f:if condition="{subscription.firstName} || {subscription.lastName}">
+	<p><f:translate key="hallo" arguments="{1:subscription.firstName, 2: subscription.lastName}" />,</p>
+</f:if>
+
+<p>Nous sommes heureux que vous souhaitiez vous abonner à la newsletter. <br>
+   L'inscription est presque terminée:</p>
+<p>Pour confirmer votre inscription, veuillez cliquer ici:<br><br>
+	<f:link.action style="background-color: #003070; padding: 8px; color: white; text-decoration: none;" absolute="1" pageUid="{settings.subscribeFormPid}" action="doConfirm" controller="Subscribe" pluginName="Subscribe" extensionName="newslettersubscribe" arguments="{uid: subscription.uid, subscriptionHash: subscription.subscriptionHash}">Confirmer l'inscription</f:link.action>
+</p>
+
+<p>
+	Vous pouvez à tout moment vous désinscrire de la newsletter en cliquant sur le<br><br>
+	<f:link.action style="background-color: #003070; padding: 8px; color: white; text-decoration: none;" absolute="1" pageUid="{settings.subscribeFormPid}" action="undosubscribe" controller="Subscribe" pluginName="Subscribe" extensionName="newslettersubscribe" arguments="{uid: subscription.uid, subscriptionHash: subscription.subscriptionHash}">Lien "Se désabonner des e-mails"</f:link.action><br><br><br>klicken.
+</p>
+ 
+
+<p>Cordialement,</p>
+
+<p>CFA Pharmacie</p>
+
+
+

@@ -1,0 +1,24 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:if condition="{cookieWarning}">
+    <f:render partial="CookieWarning"/>
+</f:if>
+<f:form action="login" actionUri="{actionUri}" target="_top" fieldNamePrefix="">
+    <fieldset>
+        <div class="input-submit-right">
+            <f:form.submit value="{f:translate(key: 'logout')}" name="submit"/>
+			<f:if condition="{settings.redirectPageLogin} == '42'">
+				<p><f:link.page pageUid="43" class="bt-pink">Déposer une annonce</f:link.page></p>
+			</f:if>
+			<f:if condition="{settings.redirectPageLogin} == '43'">
+				<p><f:link.page pageUid="42" class="bt-pink">Consulter les CV</f:link.page></p>
+			</f:if>
+        </div>
+
+        <div class="felogin-hidden">
+            <f:form.hidden name="logintype" value="logout"/>
+            <f:form.hidden name="pid" value="{storagePid}"/>
+        </div>
+    </fieldset>
+</f:form>
+</html>

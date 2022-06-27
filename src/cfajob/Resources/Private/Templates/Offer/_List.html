@@ -1,0 +1,72 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+
+
+<f:section name="content">
+    <f:flashMessages />
+
+    <div id="middle-office">
+
+        <f:form
+            action="list"
+            controller="Offer"
+            name="offers"
+            class="form-std" >
+
+            <f:render partial="Offer/Form/Fields" arguments="{_all}" />
+            <f:render partial="Offer/Form/Filter" arguments="{_all}" />
+			<div class="input-submit-filter">
+				<f:form.submit value="{f:translate(key:'tx_cfajob.search')}" />
+				<f:link.page pageUid="{f:cObject(typoscriptObjectPath:'lib.currentPageId')}" class="bt-green">
+					<f:translate key="tx_cfajob.reset" />
+				</f:link.page>
+			</div>
+        </f:form>
+
+        <div class="table-middle">
+            <f:if condition="{offers}">
+                <f:then>
+                    <f:if condition="{offers->f:count()} > {settings.pagination.itemsPerPage}">
+                        <f:then>
+                            <f:widget.paginate objects="{offers}" as="paginatedOffers" configuration="{settings.pagination}">
+                                <table class="table-std">
+                                    <f:render partial="Offer/Table/Thead" />
+                                    <tbody>
+                                        <f:for each="{paginatedOffers}" as="offer" iteration="iterator">
+                                            <f:render partial="Offer/Table/Properties" arguments="{_all}" />
+                                        </f:for>
+                                    </tbody>
+                                </table>
+                            </f:widget.paginate>
+                        </f:then>
+                        <f:else>
+                            <f:for each="{offers}" as="offer" iteration="iterator">
+                                <table class="table-std">
+                                    <f:render partial="Offer/Table/Thead" />
+                                    <tbody>
+                                    <f:for each="{offers}" as="offer" iteration="iterator">
+                                        <f:render partial="Offer/Table/Properties" arguments="{_all}" />
+                                    </f:for>
+                                    </tbody>
+                                </table>
+                            </f:for>
+                        </f:else>
+                    </f:if>
+                </f:then>
+                <f:else>
+                    <f:translate key="tx_cfajob_domain_model_offer.no_offers" />
+                </f:else>
+            </f:if>
+            <f:render partial="Offer/Lightbox/Properties" arguments="{offers:offers}" />
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        var $j = jQuery.noConflict();
+        $j(document).ready(function() {
+            $j("span.timeago").timeago();
+        });
+    </script>
+
+</f:section>
+</html>

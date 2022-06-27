@@ -1,0 +1,11 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:if condition="{footernavigation}">
+	Copyright 2020 - CFA Pharmacie
+	<f:for each="{footernavigation}" as="item" iteration="shortcutiteration">
+		<a href="{item.link}"{f:if(condition: item.target, then: ' target="{item.target}"')} title="{item.title}">
+			{item.title}
+		</a>
+	</f:for>
+	- <a href="https://www.pimentrouge.fr/" target="_blanc" rel="nofollow" title="Réalisation PimentRouge.fr">Réalisation PimentRouge.fr</a>
+</f:if>
+</html>

@@ -1,0 +1,33 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<div class="input-label"> <label><f:translate key="tx_cfajob.user_form.your_course" /> </label>
+    <div class="block-script block-diplome"> <a href="#" class="link-add">&nbsp; + <f:translate key="tx_cfajob.user_form.add_diploma" /></a>
+        <div class="field-hidden">
+            <div>
+                <label for="etablissement"><f:translate key="tx_cfajob.user_form.facility_name" /> *</label>
+                <input type="text" id="etablissement" name="diplome[0][name]"/>
+            </div>
+
+            <div>
+                <label for="diplome"><f:translate key="tx_cfajob.user_form.diploma" /></label>
+                <input type="text" id="diplome" name="diplome[0][diplome]"/>
+            </div>
+            <div class="input-flex">
+                <div>
+                    <label for="dateStart"><f:translate key="tx_cfajob.user_form.start_year" /></label>
+                    <input type="date" id="dateStart" placeholder="" name="diplome[0][dateStart]"/>
+                </div>
+                <div>
+                    <label for="dateEnd"><f:translate key="tx_cfajob.user_form.end_year" /></label>
+                    <input type="date" id="dateEnd" placeholder="" name="diplome[0][dateEnd]"/>
+                </div>
+            </div>
+            <div>
+                <label for="description"><f:translate key="tx_cfajob.user_form.description" /></label>
+                <textarea id="description" name="diplome[0][description]"></textarea>
+            </div>
+            <a href="#" class="link-add">+ <f:translate key="tx_cfajob.user_form.add_diploma" /></a> </div>
+    </div>
+</div>
+
+</html>

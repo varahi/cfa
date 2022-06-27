@@ -1,0 +1,54 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+      xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers"
+      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+      xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<f:layout name="Page"/>
+<f:section name="section_content">
+	<main>
+		<div id="top-home" class="top-home-home">	
+			<f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '107'}" />
+			<div class="row">
+				<f:render partial="Menu2" arguments="{_all}" />
+			</div>
+			<div id="title-home">
+				<f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '106'}" />
+			</div>
+		</div>
+		<div id="wrap-content">
+			<section id="section1" class="block-home">
+				<div class="content-inner">
+					<article>
+						<p class="title">Actualités</p>
+						<f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '102'}" />
+					</article>
+				</div>
+			</section>
+			<section id="section2" class="block-home">
+				<div class="content-inner">
+					<article>
+						<f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '103'}" />
+					</article>
+				</div>
+			</section>
+			<section id="section3" class="block-home">
+				<div class="content-inner">
+					<article>
+						<p class="title">Nos établissements</p>
+						<f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '104'}" />
+					</article>
+				</div>
+			</section>
+			<section id="section4" class="block-home">
+				<div class="content-inner">
+					<article>
+						<f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '105'}" />
+					</article>
+				</div>
+			</section>
+		</div>
+	</main>
+
+</f:section>
+</html>

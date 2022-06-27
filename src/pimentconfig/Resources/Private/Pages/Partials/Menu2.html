@@ -1,0 +1,52 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:if condition="{navigation2}">
+	<f:for each="{navigation2}" as="mainnavigationItem">
+		<div class="column">
+			<f:if condition='{data.uid} == 1'>
+			<!-- <div class="image loading-img"> -->
+				<!-- <f:if condition="{mainnavigationItem.files}"> -->
+					<!-- <img src="fileadmin/images/image-load.jpg" data-srcset="<f:uri.image src='{mainnavigationItem.files.0.uid}' width='1440c' treatIdAsReference='1'/> 3x, <f:uri.image src='{mainnavigationItem.files.0.uid}' width='1536c' treatIdAsReference='1'/> 2x, <f:uri.image src='{mainnavigationItem.files.0.uid}' width='{dimensions.width}c' treatIdAsReference='1'/> 1x" data-src="<f:uri.image src='{mainnavigationItem.files.0.uid}' width='{dimensions.width}' height='{dimensions.height}' treatIdAsReference='1'/>" title="{mainnavigationItem.files.0.title}" alt="{mainnavigationItem.files.0.alternative}" height="1000"/> -->
+				<!-- </f:if> -->
+			<!-- </div> -->
+			</f:if>
+			<div class="menu">
+				<div class="link">
+					<a href="{mainnavigationItem.link}">
+						<span>{mainnavigationItem.title}</span>
+					</a>
+					<div class="submenu">
+						<ul>
+						<f:for each="{mainnavigationItem.children}" as="child">
+							<li class="{f:if(condition: child.active, then:'active')} {f:if(condition: child.children, then:'submenu-item')}">
+								<f:if condition="{child.children}">
+									<f:then>
+										<a href="{child.link}" title="{child.title}">
+											{child.title}
+										</a>
+										<ul class="submenu-menu">
+											<f:for each="{child.children}" as="child2">
+												<li class="{f:if(condition: child2.active, then:'active')}">
+													<a href="{child2.link}" title="{child2.title}">
+														{child2.title}
+													</a>
+												</li>
+											</f:for>
+										</ul>
+									</f:then>
+									<f:else>
+										<a href="{child.link}" title="{child.title}">
+											{child.title}
+										</a>
+									</f:else>
+								</f:if>
+							</li>
+						</f:for>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</f:for>
+</f:if>
+</html>

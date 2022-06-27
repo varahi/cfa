@@ -1,0 +1,37 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<div id="lightbox-offer-{iterator.index}" class="lightbox-std lightbox-offer">
+    <div class="content-lightbox">
+        <div class="header">
+            <div class="title">
+                <h2>{student.position.name}</h2>
+                <p class="subtitle">
+                <p class="subtitle">{student.company.company}</p></p>
+                <p class="txt-pink">{student.city.name}</p>
+            </div>
+            <div class="right-header">
+                <p>
+                    <strong>Annonce n° 132</strong>
+                </p>
+                <p>
+                    Annonce publiée il y a 1 semaine
+                </p>
+            </div>
+        </div>
+        <div class="info">
+            <p>
+                APPRENTI PREPARATEUR EN PHARMACIE
+            </p>
+            <p>
+                CHERCHE UN APPRENTI EN 1 ERE OU 2 ME ANNEE MOTIVE SERIEUX ET DISPONIBLE POUR REJOINDRE UNE EQUIPE JEUNE ET DYNAMIQUE<br>
+                Personne à contacter:
+                AMAL TALEB<br>
+                Numéro de téléphone :
+                +0672743473
+            </p>
+        </div>
+        <f:render partial="Offer/Lightbox/Bottom" />
+    </div>
+</div>
+
+</html>

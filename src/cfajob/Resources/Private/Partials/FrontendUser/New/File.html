@@ -1,0 +1,37 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:section name="photo">
+    <div>
+        <label for="photo"><f:translate key="tx_cfajob.user_form.photo" /></label>
+        <div class="input-file">
+            <span class="bt-file"><f:translate key="tx_cfajob.user_form.browse" /></span>
+            <span class="txt-file">(<f:translate key="tx_cfajob.user_form.file_upload_max" />)</span>
+            <f:for each="{newFiles}" as="newFile" key="key" iteration="itemIteration">
+                <f:form.upload name="photo[{key}]" id="photo-{key}" />
+            </f:for>
+        </div>
+    </div>
+</f:section>
+
+<f:section name="cv">
+    <div>
+        <label for="cvNum"><f:translate key="tx_cfajob.user_form.your_digital_cv" /></label>
+        <div class="input-file">
+            <span class="bt-file"><f:translate key="tx_cfajob.user_form.browse" /></span>
+            <span class="txt-file">
+                            <f:translate key="tx_cfajob.user_form.no_file_selected" />
+                            <br>(<f:translate key="tx_cfajob.user_form.file_upload_max" />)</span>
+
+            <f:for each="{newCvfiles}" as="newFile" key="key" iteration="itemIteration">
+                <f:form.upload name="cvfile[{key}]" id="cvNum-{key}" />
+            </f:for>
+        </div>
+    </div>
+    <div class="input-label"> <label><f:translate key="tx_cfajob.user_form.cv_visibility" /></label>
+        <div>
+            <p class="txt-pink"><f:translate key="tx_cfajob.user_form.agree_info" /></p>
+        </div>
+    </div>
+</f:section>
+
+</html>

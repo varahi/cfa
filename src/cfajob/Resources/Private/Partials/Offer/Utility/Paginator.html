@@ -1,0 +1,43 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:t="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<div class="pagination">
+    <f:if condition="{pagination.previousPageNumber} && {pagination.previousPageNumber} >= {pagination.firstPageNumber}">
+        <f:then>
+            <span class="paginator-control">
+                <a href="{f:uri.action(action:actionName, arguments:{currentPage: 1})}" title="{f:translate(key:'pagination.first')}">
+                    <f:translate key="tx_cfajob.paginator.first_page" />
+                </a>
+            </span>
+        </f:then>
+        <f:else>
+            <f:comment>
+                <span class="disabled"><a href="#"><f:translate key="tx_cfajob.paginator.first_page" /></a></span>
+            </f:comment>
+        </f:else>
+    </f:if>
+
+    <ul class="f3-widget-paginator">
+        <f:for each="{pages}" as="page">
+            <li class="{f:if(condition: '{page} == {paginator.currentPageNumber}', then:'active', else:'')}">
+                <a href="{f:uri.action(action:actionName, arguments:{currentPage: page, zip: zip, city: city, checklistArr: checklistArr})}">{page}</a>
+            </li>
+        </f:for>
+    </ul>
+
+    <f:if condition="{pagination.nextPageNumber} && {pagination.nextPageNumber} <= {pagination.lastPageNumber}">
+        <f:then>
+            &nbsp;<span class="paginator-control">
+                <a href="{f:uri.action(action:actionName, arguments:{currentPage: pagination.lastPageNumber})}" title="{f:translate(key:'pagination.last')}">
+                    <f:translate key="tx_cfajob.paginator.last_page" />
+                </a>
+            </span>
+        </f:then>
+        <f:else>
+            <f:comment>
+                <span class="disabled"><a href="#"><f:translate key="tx_cfajob.paginator.last_page" /></a></span>
+            </f:comment>
+        </f:else>
+    </f:if>
+</div>
+</html>

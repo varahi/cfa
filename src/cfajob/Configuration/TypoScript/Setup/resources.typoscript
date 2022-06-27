@@ -1,0 +1,7 @@
+page.includeCSS {
+  10_custom = EXT:cfajob/Resources/Public/Css/custom.css
+}
+
+page.includeJSFooter {
+  10_custom = EXT:cfajob/Resources/Public/Javascript/custom.js
+}

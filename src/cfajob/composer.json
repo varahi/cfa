@@ -1,0 +1,30 @@
+{
+    "name": "t3dev/cfajob",
+    "type": "typo3-cms-extension",
+    "description": "Job list, offer and registration",
+    "authors": [
+        {
+            "name": "Dmitry Vasilev",
+            "role": "Developer",
+			"email": "dmitry@t3dev.ru"
+        }
+    ],
+	"version": "1.0.0",
+    "require": {
+        "typo3/cms-core": "^10.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "T3Dev\\Cfajob\\": "Classes"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "T3Dev\\Cfajob\\Tests\\": "Tests"
+        }
+    },
+    "replace": {
+        "t3dev/cfajob": "self.version",
+        "typo3-ter/cfajob": "self.version"
+    }
+}

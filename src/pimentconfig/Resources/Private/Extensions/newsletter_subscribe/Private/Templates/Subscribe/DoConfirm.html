@@ -1,0 +1,25 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers"
+      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+      xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
+      xmlns:t="Helhum\TyposcriptRendering\ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<f:layout name="Standard"></f:layout>
+
+<f:section name="Default">
+	<p>
+		{f:translate(key: 'confirmed')}:</p>
+	<p>
+		<f:if condition="{subscription.firstName} || {subscription.lastName}">
+			<f:then>{subscription.firstName} {subscription.lastName}
+				<br>
+			</f:then>
+		</f:if>
+		<f:if condition="{subscription.email}">
+			{subscription.email}
+		</f:if>
+	</p>
+	<p>{f:translate(key: 'youWillReceive')}</p>
+	<p>{f:translate(key: 'haveFun')}</p>
+</f:section>

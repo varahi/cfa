@@ -1,0 +1,26 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<div class="input-flex">
+    <div>
+        <label for="nom"><f:translate key="tx_cfajob.user_form.last_name" /> *</label>
+        <f:form.textfield id="nom" property="lastName" placeholder="{f:translate(key:'tx_cfajob.user_form.your_last_name')}" required="1" />
+    </div>
+    <div>
+        <label for="prenom"><f:translate key="tx_cfajob.user_form.first_name" /> *</label>
+        <f:form.textfield id="prenom" property="firstName" placeholder="{f:translate(key:'tx_cfajob.user_form.your_first_name')}" required="1" />
+    </div>
+</div>
+<div class="input-flex">
+    <div>
+        <label for="email"><f:translate key="tx_cfajob.user_form.your_email" /> *</label>
+        <f:form.textfield
+                id="email"
+                property="email"
+                placeholder="{f:translate(key:'tx_cfajob.user_form.dummy_email')}"
+                required="1"
+                type="mail" />
+    </div>
+
+</div>
+
+</html>

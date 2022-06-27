@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="EXT:cfajob/Resources/Private/Language/locallang_db" date="2020-08-11T10:55:33Z" product-name="cfajob">
+		<header/>
+		<body>
+			<trans-unit id="tx_cfajob_domain_model_frontenduser" resname="tx_cfajob_domain_model_frontenduser">
+				<source>Frontend User</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_frontenduser.name" resname="tx_cfajob_domain_model_frontenduser.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_frontenduser.photo">
+				<source>Photo</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_frontenduser.crdate">
+				<source>Creation Time</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_frontenduser.cvfile">
+				<source>CV File</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_frontenduser.first_name" resname="tx_cfajob_domain_model_frontenduser.first_name">
+				<source>First Name</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_frontenduser.last_name" resname="tx_cfajob_domain_model_frontenduser.last_name">
+				<source>Last Name</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_frontenduser.title_c_v" resname="tx_cfajob_domain_model_frontenduser.title_c_v">
+				<source>Title C V</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_frontenduser.about" resname="tx_cfajob_domain_model_frontenduser.about">
+				<source>About</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_frontenduser.company" resname="tx_cfajob_domain_model_frontenduser.company">
+				<source>company</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_frontenduser.contact_person" resname="tx_cfajob_domain_model_frontenduser.contact_person">
+				<source>Contact Person</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_frontenduser.diploma" resname="tx_cfajob_domain_model_frontenduser.diploma">
+				<source>Diploma</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_frontenduser.experience" resname="tx_cfajob_domain_model_frontenduser.experience">
+				<source>Experience</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_frontenduser.location" resname="tx_cfajob_domain_model_frontenduser.location">
+				<source>Location</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_frontenduser.position" resname="tx_cfajob_domain_model_frontenduser.position">
+				<source>Position</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_frontenduser.offer" resname="tx_cfajob_domain_model_frontenduser.offer">
+				<source>Offer</source>
+			</trans-unit>
+			<trans-unit id="fe_users.tx_extbase_type.Tx_Cfajob_FrontendUser" resname="fe_users.tx_extbase_type.Tx_Cfajob_FrontendUser">
+				<source>CFA Job FrontendUser</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_diploma" resname="tx_cfajob_domain_model_diploma">
+				<source>Diploma</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_diploma.name" resname="tx_cfajob_domain_model_diploma.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_diploma.diploma" resname="tx_cfajob_domain_model_diploma.diploma">
+				<source>Diploma</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_diploma.start_year" resname="tx_cfajob_domain_model_diploma.start_year">
+				<source>Start Year</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_diploma.end_year" resname="tx_cfajob_domain_model_diploma.end_year">
+				<source>End Year</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_diploma.description" resname="tx_cfajob_domain_model_diploma.description">
+				<source>Description</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_diploma.user" resname="tx_cfajob_domain_model_diploma.user">
+				<source>User</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_experience" resname="tx_cfajob_domain_model_experience">
+				<source>Experience</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_experience.employeur" resname="tx_cfajob_domain_model_experience.employeur">
+				<source>Employeur</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_experience.position" resname="tx_cfajob_domain_model_experience.position">
+				<source>Position</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_experience.start_year" resname="tx_cfajob_domain_model_experience.start_year">
+				<source>Start Year</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_experience.end_year" resname="tx_cfajob_domain_model_experience.end_year">
+				<source>End Year</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_experience.description" resname="tx_cfajob_domain_model_experience.description">
+				<source>Description</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_location" resname="tx_cfajob_domain_model_location">
+				<source>Location</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_location.name" resname="tx_cfajob_domain_model_location.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_location.training" resname="tx_cfajob_domain_model_location.training">
+				<source>Training</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_location.city" resname="tx_cfajob_domain_model_location.city">
+				<source>City</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_location.zip" resname="tx_cfajob_domain_model_location.zip">
+				<source>Zip</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_position" resname="tx_cfajob_domain_model_position">
+				<source>Position</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_position.name" resname="tx_cfajob_domain_model_position.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_offer" resname="tx_cfajob_domain_model_offer">
+				<source>Offer</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_offer.name" resname="tx_cfajob_domain_model_offer.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_offer.description" resname="tx_cfajob_domain_model_offer.description">
+				<source>Description</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_offer.email" resname="tx_cfajob_domain_model_offer.email">
+				<source>Email</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_offer.company" resname="tx_cfajob_domain_model_offer.company">
+				<source>Company</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_offer.frontenduser" resname="tx_cfajob_domain_model_offer.frontenduser">
+				<source>Frontend User</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_offer.contact_person" resname="tx_cfajob_domain_model_offer.contact_person">
+				<source>Contact Person</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_offer.site" resname="tx_cfajob_domain_model_offer.site">
+				<source>Site</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_offer.phone" resname="tx_cfajob_domain_model_offer.phone">
+				<source>Phone</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_offer.type" resname="tx_cfajob_domain_model_offer.type">
+				<source>Type</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_offer.city" resname="tx_cfajob_domain_model_offer.city">
+				<source>City</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_offer.zip" resname="tx_cfajob_domain_model_offer.zip">
+				<source>Zip</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_offer.crdate" resname="tx_cfajob_domain_model_offer.crdate">
+				<source>Creation date</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_cfajob.name" resname="tx_cfajob_cfajob.name">
+				<source>CFA Job</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_cfajob.description" resname="tx_cfajob_cfajob.description">
+				<source>Job list, offer and registration</source>
+			</trans-unit>
+			<trans-unit id="fe_users.div.additional" resname="fe_users.div.additional">
+				<source>Additional</source>
+			</trans-unit>
+			<trans-unit id="flexforms_general.settings">
+				<source>Settings</source>
+			</trans-unit>
+			<trans-unit id="flexforms_general.offer_list">
+				<source>Offer list</source>
+			</trans-unit>
+			<trans-unit id="flexforms_general.student_list">
+				<source>Student list</source>
+			</trans-unit>
+			<trans-unit id="flexforms_general.training_list">
+				<source>Training list</source>
+			</trans-unit>
+			<trans-unit id="flexforms_general.startpoint">
+				<source>Startpoint</source>
+			</trans-unit>
+			<trans-unit id="flexforms_general.offer_form">
+				<source>New offer form</source>
+			</trans-unit>
+			<trans-unit id="flexforms_general.offer.itemsPerPage">
+				<source>Items per page</source>
+			</trans-unit>
+			<trans-unit id="flexforms_general.redirectPage">
+				<source>Redirect page</source>
+			</trans-unit>
+			<trans-unit id="flexforms_general.returnPage">
+				<source>Return page</source>
+			</trans-unit>
+			<trans-unit id="flexforms_general.user_create_form">
+				<source>User create form</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_frontenduser.about">
+				<source>About</source>
+			</trans-unit>
+			<trans-unit id="flexforms_general.studentListInfo">
+				<source>Student list info</source>
+			</trans-unit>
+			<trans-unit id="flexforms_general.user_profile">
+				<source>User profile</source>
+			</trans-unit>
+			<trans-unit id="flexforms_general.userProfilePage">
+				<source>User profile page</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_training" resname="tx_cfajob_domain_model_training">
+				<source>Training</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_training.name" resname="tx_cfajob_domain_model_training.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_training.theme" resname="tx_cfajob_domain_model_training.theme">
+				<source>Theme</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_training.is_dpc" resname="tx_cfajob_domain_model_training.is_dpc">
+				<source>Is Dpc</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_training.is_new" resname="tx_cfajob_domain_model_training.is_new">
+				<source>Is New</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_training.information" resname="tx_cfajob_domain_model_training.information">
+				<source>Information</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_training.duration" resname="tx_cfajob_domain_model_training.duration">
+				<source>Duration</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_training.whois" resname="tx_cfajob_domain_model_training.whois">
+				<source>Whois</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_training.whoare" resname="tx_cfajob_domain_model_training.whoare">
+				<source>Whoare</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_training.course_file" resname="tx_cfajob_domain_model_training.course_file">
+				<source>Course File</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_training.registration_file" resname="tx_cfajob_domain_model_training.registration_file">
+				<source>Registration File</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_training.image" resname="tx_cfajob_domain_model_training.image">
+				<source>Image</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_training.programm" resname="tx_cfajob_domain_model_training.programm">
+				<source>Programm</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_training.additional_info" resname="tx_cfajob_domain_model_training.additional_info">
+				<source>Additional Info</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_training.files_images" resname="tx_cfajob_domain_model_training.files_images">
+				<source>Files and images</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_training.city" resname="tx_cfajob_domain_model_training.city">
+				<source>City</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_training.category" resname="tx_cfajob_domain_model_training.category">
+				<source>Category</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_training.additional_info" resname="tx_cfajob_domain_model_training.additional_info">
+				<source>Additional Info</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_training.relations" resname="tx_cfajob_domain_model_training.relations">
+				<source>Relations</source>
+			</trans-unit>
+			<trans-unit id="tx_cfajob_domain_model_training.path_segment">
+				<source>Path segment</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

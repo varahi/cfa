@@ -1,0 +1,42 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:for each="{paginatedItems}" as="offer" iteration="iterator">
+    <div id="lightbox-offer-{iterator.index}" class="lightbox-std lightbox-offer">
+        <div class="content-lightbox">
+            <div class="header">
+                <div class="title">
+                    <h2>{offer.name}</h2>
+                    <p class="subtitle">{offer.company.company}</p>
+                    <p class="txt-pink">{offer.city.title}</p>
+                </div>
+                <div class="right-header">
+                    <p><strong><f:translate key="tx_cfajob.announcement" /> n° {offer.uid}</strong></p>
+                    <p>
+                        <f:translate key="tx_cfajob.add_posted" />
+                        <span class="timeago" title="{f:format.date(format: 'Y-m-d H:i:s', date: '{offer.crdate}')}">
+                            <f:format.date format="%d.%m.%Y">{offer.crdate}</f:format.date>
+                        </span>
+                    </p>
+                </div>
+            </div>
+            <div class="info">
+                <p>{offer.company.company}</p>
+                <p>
+                    <f:if condition="{offer.description}">
+                        {offer.description}<br>
+                        <f:translate key="tx_cfajob.contact_person" /> :
+                    </f:if>
+                    <f:if condition="{offer.contactPerson}">
+                        {offer.contactPerson}<br>
+                    </f:if>
+                    <f:if condition="{offer.phone}">
+                        <f:translate key="tx_cfajob.phone" /> : {offer.phone}
+                    </f:if>
+                </p>
+            </div>
+            <f:render partial="Offer/Lightbox/Bottom" arguments="{offer: offer}"/>
+        </div>
+    </div>
+</f:for>
+
+</html>

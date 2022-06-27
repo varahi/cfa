@@ -1,0 +1,300 @@
+
+@import "styles.variable.scss";
+@import "mixin.scss";
+
+/**** BUTTON / TEXT STYLE ****/
+.bt-border-white{
+	display: inline-block;
+	padding: 15px 30px;
+	color: #fff !important;
+	font-size: 18px;
+	@include transition(all, 0.3s, 0s);
+	position: relative;
+	text-decoration: none !important;
+	font-weight: 400 !important;
+	border-radius: 2px;
+	border: 1px solid #fff;
+	position: relative;
+	span{
+		font-size: inherit;
+		font-weight: inherit !important;
+		color: inherit !important;
+		@include transition(all, 0.3s, 0s);
+		&:after, &:before{
+			@include transition(all, 0.3s, 0s);
+			@include transform(scaleY(0));
+		}
+		&:before{
+			content: "";
+			position: absolute;
+			left: -1px;
+			width: 1px;
+			background-color: $yellow;
+			top: -1px;
+			bottom: -1px;
+			-webkit-transform-origin: center bottom;
+			   -moz-transform-origin: center bottom;
+				-ms-transform-origin: center bottom;
+				 -o-transform-origin: center bottom;
+					transform-origin: center bottom;
+			transition-delay: 0.3s;
+		}
+		&:after{
+			content: "";
+			position: absolute;
+			right: -1px;
+			width: 1px;
+			background-color: $yellow;
+			top: -1px;
+			bottom: -1px;
+			-webkit-transform-origin: center top;
+			   -moz-transform-origin: center top;
+				-ms-transform-origin: center top;
+				 -o-transform-origin: center top;
+					transform-origin: center top;
+			transition-delay: 0.3s;
+		}
+	}
+	&:after, &:before{
+		@include transition(all, 0.3s, 0s);
+		@include transform(scaleX(0));
+	}
+	&:before{
+		content: "";
+		position: absolute;
+		top: -1px;
+		height: 1px;
+		background-color: $yellow;
+		left: -1px;
+		right: -1px;
+		-webkit-transform-origin: left center;
+		   -moz-transform-origin: left center;
+			-ms-transform-origin: left center;
+			 -o-transform-origin: left center;
+				transform-origin: left center;
+	}
+	&:after{
+		content: "";
+		position: absolute;
+		bottom: -1px;
+		height: 1px;
+		background-color: $yellow;
+		left: -1px;
+		right: -1px;
+		-webkit-transform-origin: right center;
+		   -moz-transform-origin: right center;
+			-ms-transform-origin: right center;
+			 -o-transform-origin: right center;
+				transform-origin: right center;
+	}
+	&:hover{
+		color: $yellow !important;
+		&:before, &:after{
+			@include transform(scaleX(1));
+		}
+		span:before, span:after{
+			@include transform(scaleY(1));
+		}
+	}
+}
+.bt-blue, .bt-black, .bt-green, .bt-pink{
+	display: inline-block;
+	padding: 12px 20px;
+	color: #fff !important;
+	border-radius: 50px;
+	background-color: $blue;
+	font-size: 16px;
+	font-family: $lato;
+	@include transition(all, 0.3s, 0s);
+	position: relative;
+	&:hover, &:active, &:focus{
+		text-decoration: none;
+		background-color: darken($blue, 10%);
+	}
+}
+
+.bt-black{
+	background-color: $black;
+	&:hover, &:active, &:focus{
+		background-color: lighten($black, 10%);
+	}
+}
+
+.bt-pink{
+	background-color: $pink;
+	&:hover, &:active, &:focus{
+		background-color: darken($pink, 10%);
+	}
+}
+.bt-green{
+	background-color: $green;
+	&:hover, &:active, &:focus{
+		background-color: darken($green, 10%);
+	}
+}
+
+.bt-pdf{
+	background: url('../Images/icon_pdf.svg') no-repeat left center;
+	padding: 10px 0 10px 60px;
+	color: $pink;
+}
+
+.block-green{
+	background-color: $green;
+	padding: 20px 15px;
+	*{
+		color: #fff !important;
+	}
+}
+.block-pink{
+	background-color: $pink;
+	padding: 10px 15px;
+	*{
+		color: #fff !important;
+	}
+	.txt-fax-small{
+		background-image: url('../Images/icon_fax_small_pink.svg');
+	}
+	.txt-mail-small{
+		background-image: url('../Images/icon_mail_small_pink.svg');
+	}
+}
+
+.size_18{
+    font-size: 18px !important;
+	vertical-align: bottom;
+	line-height: 1.1;
+	*{
+		line-height: inherit;
+	}
+}
+.size_20{
+    font-size: 20px !important;
+	vertical-align: bottom;
+	line-height: 1.1;
+	*{
+		line-height: inherit;
+	}
+}
+.size_22{
+    font-size: 22px !important;
+	vertical-align: bottom;
+	line-height: 1.1;
+	*{
+		line-height: inherit;
+	}
+}
+.size_24{
+    font-size: 24px !important;
+	vertical-align: bottom;
+	line-height: 1.1;
+	*{
+		line-height: inherit;
+	}
+}
+.size_30{
+    font-size: 30px !important;
+	vertical-align: bottom;
+	line-height: 1.1;
+	*{
+		line-height: inherit;
+	}
+}
+.size_36{
+    font-size: 36px !important;
+	vertical-align: bottom;
+	line-height: 1.1;
+	*{
+		line-height: inherit;
+	}
+}
+.size_38{
+    font-size: 38px !important;
+	vertical-align: bottom;
+	line-height: 1.1;
+	*{
+		line-height: inherit;
+	}
+}
+.size_48{
+    font-size: 48px !important;
+	vertical-align: bottom;
+	line-height: 1.1;
+	*{
+		line-height: inherit;
+		font-size: inherit;
+	}
+}
+
+.text-right{
+	text-align: right !important;
+}
+.text-center{
+	text-align: center !important;
+}
+.text-left{
+	text-align: left !important;
+}
+
+.txt-pink{
+	color: $pink !important;
+}
+.txt-green{
+	color: $green !important;
+}
+.txt-blue{
+	color: $blue !important;
+}
+.txt-yellow{
+	color: $yellow !important;
+}
+
+.pointer-pink{
+	padding-left: 100px;
+	background: url('../Images/pointer_pink.svg') no-repeat left top;
+}
+.pointer-blue{
+	padding-left: 100px;
+	background: url('../Images/pointer_blue.svg') no-repeat left top;
+}
+.pointer-yellow{
+	padding-left: 100px;
+	background: url('../Images/pointer_yellow.svg') no-repeat left top;
+}
+
+.txt-phone, .txt-mail{
+	background: url('../Images/icon_phone.svg') no-repeat left center;
+	padding: 10px 0 10px 45px;
+	background-size: 36px;
+	color: #121212;
+	font-size: 16px;
+	font-family: 'Lato';
+	font-weight: 700;
+}
+.txt-mail{
+	background-image: url('../Images/icon_mail.svg');
+}
+
+.txt-phone-small, .txt-mail-small, .txt-fax-small, .txt-time-small, .txt-user-small{
+	background: url('../Images/icon_mail_small_green.svg') no-repeat left 5px;
+	padding: 5px 0 5px 25px;
+	background-size: 18px;
+	color: #121212;
+	font-size: 16px;
+}
+p.txt-phone-small{
+	background-image: url('../Images/icon_phone_small.svg');
+}
+p.txt-user-small{
+	background-image: url('../Images/icon_user_small.svg');
+}
+p.txt-fax-small{
+	background-image: url('../Images/icon_fax_small_green.svg');
+}
+p.txt-time-small{
+	background-image: url('../Images/icon_time_small.svg');
+}
+
+/**** END BUTTON / TEXT STYLE ****/
+
+

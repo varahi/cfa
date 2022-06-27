@@ -1,0 +1,44 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:section name="main-info">
+    <div class="detail-main-info">
+        <f:if condition="{user.lastName}">
+            <div class="detail-info">
+                <span class="txt-green"><f:translate key="tx_cfajob.last_name" />: </span> <span class="bold">{user.lastName}</span>
+            </div>
+        </f:if>
+        <f:if condition="{user.firstName}">
+            <div class="detail-info">
+                <span class="txt-green"><f:translate key="tx_cfajob.first_name" />: </span> <span class="bold">{user.firstName}</span>
+            </div>
+        </f:if>
+        <f:if condition="{user.email}">
+            <div class="detail-info">
+                <span class="txt-green"><f:translate key="tx_cfajob.email" />: </span> <span class="bold">{user.email}</span>
+            </div>
+        </f:if>
+        <f:if condition="{user.location.name}">
+            <div class="detail-info">
+                <span class="txt-green"><f:translate key="tx_cfajob.city" />: </span> <span class="bold">{user.location.name}</span>
+            </div>
+        </f:if>
+        <f:if condition="{user.position}">
+            <div class="detail-info last-block">
+                <span class="txt-green"><f:translate key="tx_cfajob.position_type_research" />: </span> <span class="bold">{user.position.name}</span>
+            </div>
+        </f:if>
+    </div>
+</f:section>
+
+<f:section name="additional-info">
+    <div class="detail-additional-info">
+        <f:if condition="{user.about}">
+            <div class="detail-info about">
+                <span class="txt-green"><f:translate key="tx_cfajob.user_form.who_are_you" /> </span>
+                <p><f:format.raw><f:format.nl2br>{user.about}</f:format.nl2br></f:format.raw></p>
+            </div>
+        </f:if>
+    </div>
+</f:section>
+
+</html>

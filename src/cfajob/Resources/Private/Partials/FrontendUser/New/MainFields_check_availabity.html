@@ -1,0 +1,51 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<div class="input-flex">
+    <div>
+        <label for="nom"><f:translate key="tx_cfajob.user_form.last_name" /> *</label>
+        <f:form.textfield id="nom" property="lastName" placeholder="{f:translate(key:'tx_cfajob.user_form.your_last_name')}" required="1" />
+    </div>
+    <div>
+        <label for="prenom"><f:translate key="tx_cfajob.user_form.first_name" /> *</label>
+        <f:form.textfield id="prenom" property="firstName" placeholder="{f:translate(key:'tx_cfajob.user_form.your_first_name')}" required="1" />
+    </div>
+</div>
+<div class="input-flex">
+    <div>
+        <label for="email"><f:translate key="tx_cfajob.user_form.your_email" /> *</label>
+        <f:form.textfield
+                id="email"
+                property="email"
+                placeholder="{f:translate(key:'tx_cfajob.user_form.dummy_email')}"
+                required="1"
+                type="mail"
+                additionalAttributes="{onBlur: 'checkAvailability()'}" />
+        <span id="user-availability-status">{var}</span>
+    </div>
+
+    <div>
+        <label for="password"><f:translate key="tx_cfajob.user_form.create_password" /> *</label>
+        <f:form.textfield id="password" property="password"
+                          placeholder="{f:translate(key:'tx_cfajob.user_form.create_password_placeholder')}" required="1" type="password" />
+    </div>
+</div>
+
+<script>
+    function checkAvailability() {
+        //var currentUrl = '<f:cObject typoscriptObjectPath="lib.currentURL" />';
+        jQuery.ajax({
+            url: "typo3conf/ext/cfajob/Classes/Php/CheckAvailability.php",
+            //url: currentUrl,
+            data:'email='+$("#email").val(),
+            type: "POST",
+            success:function(data){
+                //$("#user-availability-status").html('Email Not Available');
+                $("#user-availability-status").html(data);
+                //alert(data);
+            },
+            error:function (){}
+        });
+    }
+</script>
+
+</html>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="EXT:cfajob/Resources/Private/Language/locallang_csh" date="2020-08-11T10:55:33Z" product-name="cfajob">
+		<header/>
+		<body>
+			<trans-unit id="name.description" resname="name.description">
+				<source>name</source>
+			</trans-unit>
+			<trans-unit id="first_name.description" resname="first_name.description">
+				<source>firstName</source>
+			</trans-unit>
+			<trans-unit id="last_name.description" resname="last_name.description">
+				<source>lastName</source>
+			</trans-unit>
+			<trans-unit id="title_c_v.description" resname="title_c_v.description">
+				<source>titleCV</source>
+			</trans-unit>
+			<trans-unit id="about.description" resname="about.description">
+				<source>about</source>
+			</trans-unit>
+			<trans-unit id="company.description" resname="company.description">
+				<source>company</source>
+			</trans-unit>
+			<trans-unit id="contact_person.description" resname="contact_person.description">
+				<source>contactPerson</source>
+			</trans-unit>
+			<trans-unit id="diploma.description" resname="diploma.description">
+				<source>diploma</source>
+			</trans-unit>
+			<trans-unit id="experience.description" resname="experience.description">
+				<source>experience</source>
+			</trans-unit>
+			<trans-unit id="location.description" resname="location.description">
+				<source>location</source>
+			</trans-unit>
+			<trans-unit id="position.description" resname="position.description">
+				<source>position</source>
+			</trans-unit>
+			<trans-unit id="offer.description" resname="offer.description">
+				<source>offer</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

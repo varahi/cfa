@@ -1,0 +1,39 @@
+<div class="fixed-load loading-img">
+	<div class="content-load">
+		<div class="logo">
+			<a href="/" title="CFA Pharmacie - Marseille, Alpes, Provence">
+				<img src="fileadmin/images/logo.svg" width="285" alt="CFA Pharmacie - Marseille, Alpes, Provence"/>
+			</a>
+		</div>
+		<div class="loader"></div>
+	</div>
+</div>
+<header id="header">
+	<div class="content-inner">
+		<div id="top-header">
+			<div id="logo">
+				<a href="/"><img src="fileadmin/images/logo.svg" width="285" alt="CFA Pharmacie - Marseille, Alpes, Provence"/></a>
+			</div>
+			<div id="right-header">
+				<div id="contact-header">
+					<f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{homepage}', colPos: '100'}" />
+				</div>
+				<div id="social-network">
+					<div class="image">
+						<a href="https://www.facebook.com/cfapharmacie.fr/" target="_blank" title="Facebook"><img src="fileadmin/images/icon_facebook.svg" height="36" alt="Facebook"/></a>
+						<a href="https://www.instagram.com/cfapharmacie.bdr/" target="_blank" title="Instagram"><img src="fileadmin/images/icon_instagram.svg" height="36" alt="Instagram"/></a>
+					</div>
+				</div>
+				<div id="button-header">
+					<f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{homepage}', colPos: '101'}" />
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+<div id="sidebar-menu">
+	<div id="main-menu">
+		<div class="mobile-menu"><span>MENU</span></div>
+		<f:render partial="Navigation" arguments="{_all}" />
+	</div>
+</div>

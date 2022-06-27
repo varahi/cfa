@@ -1,0 +1,65 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers"
+      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+      xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
+      xmlns:t="Helhum\TyposcriptRendering\ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<f:layout name="Standard"></f:layout>
+
+<f:section name="Default">
+	<f:form object="{subscription}" extensionName="newslettersubscribe" name="subscription" action="createConfirmation" pageUid="{settings.subscribeFormPid}">
+		<input type="hidden" name="formToken" value="{formToken}">
+		</input.hidden>
+		<v:condition.iterator.contains needle="gender" haystack="{fields}">
+			<label>
+				<f:translate key="gender"></f:translate>
+				<f:form.select property="gender" options="{w: '{f:translate(key: \'mrs\')}', m: '{f:translate(key: \'mr\')}', v: '{f:translate(key: \'various\')}'}" prependOptionLabel="{f:translate(key: 'select')}" />
+			</label>
+		</v:condition.iterator.contains>
+		<v:condition.iterator.contains needle="firstName" haystack="{fields}">
+			<label>
+				<f:translate key="firstName"></f:translate>
+				<f:form.textfield property="firstName" />
+			</label>
+		</v:condition.iterator.contains>
+		<v:condition.iterator.contains needle="lastName" haystack="{fields}">
+			<label>
+				<f:translate key="lastName"></f:translate>
+				<f:form.textfield property="lastName" />
+			</label>
+		</v:condition.iterator.contains>
+		<div class="input-flex">
+			<div><f:form.textfield property="email" placeholder="{f:translate(key: 'emailPlaceholder')}"></f:form.textfield></div>
+			<div class="input-submit">
+				<button class="button hollow" type="submit">{f:translate(key: 'submit')}</button>
+			</div>
+		</div>
+		<div class="input-checkbox">
+			<f:form.checkbox property="dataProtectionAccepted" value="1" checked="{dataProtectionAccepted} == 1" id="dataProtectionAccepted"></f:form.checkbox>
+			<label for="dataProtectionAccepted">
+				{f:translate(key: 'dataProtectionHint1')}
+				<f:link.typolink parameter="{dataProtectionPage}" target="_blank">{f:translate(key: 'dataProtection')}</f:link.typolink>
+			</label>
+		</div>
+		<f:form.validationResults for="subscription.email">
+			<f:if condition="{validationResults.flattenedErrors}">
+				<f:for each="{validationResults.errors}" as="error">
+					<p class="help-text">
+						<f:translate key="error.{error.code}" />
+					</p>
+				</f:for>
+			</f:if>
+		</f:form.validationResults>
+		
+		<f:form.validationResults for="subscription.dataProtectionAccepted">
+			<f:if condition="{validationResults.flattenedErrors}">
+				<f:for each="{validationResults.errors}" as="error">
+					<p class="help-text">
+						<f:translate key="error.{error.code}" />
+					</p>
+				</f:for>
+			</f:if>
+		</f:form.validationResults>
+	</f:form>
+</f:section>

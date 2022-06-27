@@ -1,0 +1,10 @@
+<f:if condition="{data.flexform_hide_row} == 1">
+    <f:then>
+        <f:render partial="03_FourColumns" arguments="{_all}" />
+    </f:then>
+    <f:else>
+        <div class="row {data.flexform_row_class} {f:if(condition: data.space_before_class, then: ' frame-space-before-{data.space_before_class}')}{f:if(condition: data.space_after_class, then: ' frame-space-after-{data.space_after_class}')}">
+            <f:render partial="03_FourColumns" arguments="{_all}" />
+        </div>
+    </f:else>
+</f:if>

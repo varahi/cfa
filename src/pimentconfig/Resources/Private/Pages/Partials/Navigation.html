@@ -1,0 +1,33 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:if condition="{mainnavigation}">
+	<nav>		
+		<ul>
+			<f:for each="{mainnavigation}" as="mainnavigationItem">
+				<li class="{f:if(condition: mainnavigationItem.children, then:'submenu')} {f:if(condition: mainnavigationItem.active, then:'active')} {mainnavigationItem.data.author}" data-color="{mainnavigationItem.data.author}">
+					<div class="content">
+						<a href="{mainnavigationItem.link}"{f:if(condition: mainnavigationItem.target, then: ' target="{mainnavigationItem.target}"')} title="{mainnavigationItem.title}">
+							<span class="image">
+								<f:if condition="{mainnavigationItem.files}">
+									<f:image src="{mainnavigationItem.files.0.uid}" treatIdAsReference="1" title="{mainnavigationItem.files.0.title}" alt="{mainnavigationItem.files.0.alternative}" maxWidth="40" maxHeight="40" />
+								</f:if>
+							</span>
+							<span class="text">{mainnavigationItem.title}</span>
+						</a>
+						<f:if condition='{mainnavigationItem.children}'>
+							<div class="submenu-menu">
+							<f:for each="{mainnavigationItem.children}" as="child">
+								<a href="{child.link}" title="{child.title}">
+									{child.title}
+								</a>
+							</f:for>
+							</div>
+						</f:if>
+					</div>
+				</li>
+			</f:for>            
+		</ul>
+        
+	</nav>
+</f:if>
+</html>

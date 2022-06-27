@@ -1,0 +1,17 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<tr>
+    <td class="col-number">№ {offer.uid}</td>
+    <td><a href="#" class="link-dialog" data-dialog="lightbox-offer-{iterator.index}">
+        <span class="txt-pink">{offer.name}</span></a>
+        <span class="txt-green">{offer.company.company}</span>
+    </td>
+    <td> {offer.zip} {offer.city.name}</td>
+    <td>{offer.type.name}
+        <span class="txt-green timeago" title="{f:format.date(format: 'Y-m-d H:i:s', date: '{offer.crdate}')}">
+            <f:format.date format="%d.%m.%Y">{offer.crdate}</f:format.date>
+        </span>
+    </td>
+</tr>
+
+</html>

@@ -1,0 +1,24 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers"
+      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+      xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
+      xmlns:t="Helhum\TyposcriptRendering\ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<f:if condition="{subscription.firstName} || {subscription.lastName}">
+	<p>Bonjour {subscription.firstName} {subscription.lastName},</p>
+</f:if>
+
+<p>Vous êtes déjà abonné à cette newsletter.</p>
+
+<p>Vous pouvez vous désincrire de notre newsletter en cliquant sur le lien ci dessous :</p>
+
+<p>
+	<f:link.action style="background-color: #003070; padding: 8px; color: white; text-decoration: none;" absolute="1" action="undosubscribe" controller="Subscribe" pluginName="Subscribe" extensionName="newslettersubscribe" arguments="{uid: subscription.uid, subscriptionHash: subscription.subscriptionHash}">Annuler l'inscription</f:link.action>
+</p>
+
+<p>Cordialement,</p>
+
+<p>CFA Pharmacie</p>
+
+</html>

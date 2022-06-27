@@ -1,0 +1,413 @@
+
+@import "styles.variable.scss";
+@import "mixin.scss";
+
+/** Datepicker **/
+.ui-datepicker{
+	width: 235px;
+	max-width: 100%;
+	margin: 0 auto;
+	.ui-datepicker-header{
+		text-align: center;
+		background-color: $blue;
+		position: relative;
+		a{
+			position: absolute;
+			cursor: pointer;
+			top: 16px;
+			display: block;
+			width: 12px;
+			height: 12px;
+			text-indent: -9999px;
+			background: url('../images/arrow_datepicker.png') no-repeat 0 0;
+			&.ui-datepicker-prev{
+				left: 20px;
+				background-position: 0 0;
+			}
+			&.ui-datepicker-next{
+				right: 20px;
+				background-position: 0 100%;
+			}
+		}
+		span{
+			font-size: 16px;
+			font-weight: 700;
+			line-height: 1.4;
+			color: #fff;
+		}
+	}
+	.ui-datepicker-title{
+		padding: 10px 0;
+		margin: 0;
+	}
+	.ui-datepicker-calendar{
+		width: 100%;
+		border-collapse: collapse;
+		border: 1px solid $blue;
+		th, td{
+			text-align: center;
+			width: 30px;
+			height: 30px;
+			padding: 0;
+			background-color: #fff;
+			border: 1px solid $black;
+			font-size: 12px;
+			color: $red;
+			@include transition(all, 0.3s, 0s);
+			span, a{
+				font-size: inherit;
+				font-weight: 400;
+				display: inline-block; 
+				line-height: 30px;
+				width: 100%;
+				height: 100%;
+				color: inherit;
+				text-decoration: none;
+			}
+			&.ui-state-disabled{
+				background-color: $grey;
+				color: #fff;
+			}	
+			&:hover, &.ui-datepicker-current-day{
+				background-color: $blue;
+				color: #fff;
+			}
+			&.ui-datepicker-today{
+				background-color: $yellow;
+				color: #fff;
+			}
+		}
+		th{
+			background-color: $grey;
+			border: none;
+			font-weight: 400;
+			color: #fff;
+		} 
+	}
+}
+
+/** End Datepicker **/
+
+
+/** Select **/
+.input-select{
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	width: 100%;
+}
+
+.ui-selectmenu-button{
+	display: inline-block;
+	position: relative;
+	color: rgba(#707070, 0.5);
+	font-size: 16px;
+	border-radius: 5px;
+	width: 100% !important;
+	cursor: pointer;
+	border: 1px solid $pink;
+	font-family: $lato;
+	background-color: #fff;
+	
+	span.ui-selectmenu-text{
+		font: inherit;
+		color: inherit;
+		padding: 20px 70px 20px 20px;
+		display: block;
+	}
+	span.ui-icon{
+		width: 36px;
+		height: 18px;
+		display: block;
+		background: url('../Images/icon_arrow_select.svg') no-repeat center center;
+		position: absolute;
+		right: 40px;
+		top: 45%;
+		top: calc(50% - 8px);
+	}
+}
+
+.ui-selectmenu-menu{
+	position: absolute;
+	display: none;
+	top: 100%;
+	left: 0px !important;
+	right: 0;
+	z-index: 15;
+	&.ui-selectmenu-open{
+		display: block;
+	}
+	
+	ul{
+		min-width: 100%;
+		width: auto !important;
+		max-height: 200px;
+		overflow-y: auto;
+		
+		li{
+			cursor: pointer;
+			background-color: #fff;
+			margin: 0px 0 0 0;
+			border: 1px solid $pink;
+			border-top: none;
+			float: none !important;
+			text-align: left !important;
+			color: rgba(#707070, 0.5);
+			padding: 20px 20px;
+			font-size: 16px;
+			list-style: none;
+			@include transition(all, 0.3s, 0s);
+			&:first-child{
+				border-top: 1px solid #707070;
+			}
+			&.ui-state-disabled{
+				display: none;
+			}
+			&:hover{
+				color: #fff !important;
+				background-color: $pink;
+			}
+		}
+	}
+}
+/** End Select **/
+
+/** Dialog **/
+.lightbox-std{
+	display: none;
+}
+.ui-widget-overlay{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 998;
+}
+.ui-dialog{
+	.ui-dialog-titlebar{
+		button{
+			padding: 0;
+			width: 22px;
+			height: 22px;
+			background: url('../Images/icon_close.svg') no-repeat center center;
+			border-radius: 0;
+			min-width: 0;
+		}
+	}
+}
+
+	#lightbox-login{
+		width: 500px !important;
+		margin: 0 auto;
+		form{
+			input{
+				color: #707070;
+				font-size: 18px;
+				font-weight: 700;
+				border-radius: 0;
+				padding: 14px 20px;
+				width: 100%;
+			}
+			input[type="submit"]{
+				width: 100%;
+				text-align: center;
+				border-radius: 0;
+				text-transform: uppercase;
+				font-weight: 700;
+			}
+		}
+		.link-forgot{
+			margin-top: -10px;
+			display: block;
+			margin-bottom: 35px;
+		}
+	}
+	.lightbox-std{
+		background-color: #fff;
+		border-radius: 10px;
+		border: 1px solid #707070;
+		padding: 30px 90px;
+		&.lightbox-offer{
+			padding: 80px 90px;
+		}
+		.content-lightbox{
+			.header{
+				@include flexbox();
+				@include flexbox-wrap(wrap);
+				.right-header{
+					margin-left: auto;
+					text-align: right;
+					p{
+						font-size: 16px;
+					}
+				}
+			}
+			.info{
+				padding: 60px 0;
+				p{
+					font-size: 18px;
+					font-weight: 400;
+				}
+			}
+			.bottom{
+				padding: 20px 0;
+				border-top: 1px solid #707070;
+				p{	
+					font-size: 18px;
+					font-weight: 400;
+					a{
+						font-weight: 700;
+						color: $pink;
+					}
+				}
+			}
+			p, h2, h3{
+				color: #000;
+			}
+			h2{
+				font-size: 26px;
+				font-weight: 700;
+				color: $pink;
+				margin: 0 0 10px 0;
+			}
+			.subtitle{
+				font-size: 18px;
+				color: $green;
+				text-transform: uppercase;
+				font-weight: 700;
+				margin: 0 0 10px 0;
+			}
+			h3{
+				font-size: 20px;
+				font-weight: 700;
+				text-align: center;
+				margin: 0 0 20px 0;
+			}
+			p, a{
+				font-size: 16px;
+				color: #707070;
+				margin: 0;
+				font-weight: 700;
+				*{
+					font: inherit;
+					color: inherit;
+				}
+			}
+			a{
+				text-decoration: underline;
+			}
+			p.title-txt{
+				font-size: 30px;
+				text-transform: uppercase;
+				text-align: center;
+				margin: 0 0 20px 0;
+			}
+			iframe{
+				width: 100%;
+			}
+			
+			.form-std{
+				fieldset{
+					padding: 15px 0 0px 0;
+					border-top: 1px solid #fff;
+					&:first-child{
+						border: none;
+					} 
+				}
+				label{
+					text-transform: uppercase;
+					font-size: 12px;
+					color: #fff;
+					margin: 0 0 10px 0;
+					letter-spacing: 1px;
+				}
+				input{
+					border: 1px solid #707070;
+					font-size: 14px;
+					padding: 15px 15px;
+					text-transform: uppercase;
+					letter-spacing: 1px;
+				}
+				.ui-selectmenu-button {
+					span.ui-selectmenu-text{
+						padding: 15px 40px 15px 15px;
+					}
+					span.ui-icon{
+						right: 15px;
+						background: url('../images/arrow_select2.png') no-repeat center center;
+					}
+				}
+				
+				.icheckbox{
+					width: 15px;
+					height: 15px;
+					background-color: #fff;
+					&.checked{
+						background-image: url('../images/icon_check.png');
+						background-size: 13px;
+						background-color: #fff !important;
+					}
+				}
+				
+				.input-right{
+					@include flexbox();
+					margin: 0 0 8px 0;
+					label{
+						display: inline-block;
+						margin: auto 20px auto 0;
+						text-align: right;
+						flex: 1;
+						text-transform: none;
+					}
+					>div{
+						width: 80px;
+					}
+					.ui-selectmenu-button span.ui-selectmenu-text{
+						padding: 8px 40px 8px 15px;
+					}
+				}
+				
+				.input-submit{
+					text-align: right;
+					margin: 40px 0 0 0;
+					input{
+						background-color: $red;
+						border: none;
+						margin-left: auto;
+						&:hover{
+							background-color: lighten($red, 10%);
+						}
+					}
+				}
+			}
+			
+		}
+	}
+	.lightbox-offer{
+		width: 1250px !important;
+	}
+.ui-dialog{
+	width: auto !important;
+	min-width: 500px;
+	max-width: 90%;
+	height: auto !important;
+	z-index: 999;
+	position: absolute;
+	.ui-dialog-title{
+		display: none;
+	}
+	.ui-dialog-titlebar-close{
+		position: absolute;
+		top: 15px;
+		right: 15px;
+		width: 15px;
+		height: 15px;
+		background: url('../images/icon_close2.png') no-repeat center center;
+		border: none;
+		.ui-button-text{
+			display: none;
+		}
+	}
+}
+/** End Dialog **/

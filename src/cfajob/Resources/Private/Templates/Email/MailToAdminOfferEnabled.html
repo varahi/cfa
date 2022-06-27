@@ -1,0 +1,47 @@
+<f:layout name="Email" />
+<f:section name="main">
+
+    <h1>Vous avez une nouvelle offre</h1>
+
+    <h2>LE POSTE</h2>
+
+    <f:if condition="{offer.uid}">
+        Offer #: {offer.uid} <br />
+    </f:if>
+    <f:if condition="{offer.name}">
+        Nom du poste: {offer.name} <br />
+    </f:if>
+    <f:if condition="{offer.type}">
+        Type de poste: {offer.type.name} <br />
+    </f:if>
+    <f:if condition="{offer.city}">
+        City: {offer.city.name} <br />
+    </f:if>
+    <f:if condition="{offer.zip}">
+        Code postal: {offer.zip} <br />
+    </f:if>
+    <f:if condition="{offer.description}">
+        Description du poste: <f:format.raw><f:format.nl2br>{offer.description}</f:format.nl2br></f:format.raw> <br />
+    </f:if>
+    <f:if condition="{offer.email}">
+        Email/URL à laquelle postuler: {offer.email} <br />
+    </f:if>
+
+    <hr />
+
+    <h2>VOTRE SOCIÉTÉ</h2>
+
+    <f:if condition="{user.company}">
+        Nom de l’entreprise: {user.company} <br />
+    </f:if>
+    <f:if condition="{offer.site}">
+        Site internet (optionnel): {offer.site} <br />
+    </f:if>
+    <f:if condition="{offer.contactPerson}">
+        Nom de la personne à contacter : {offer.contactPerson} <br />
+    </f:if>
+    <f:if condition="{offer.phone}">
+        Numéro de téléphone: {offer.phone} <br />
+    </f:if>
+
+</f:section>

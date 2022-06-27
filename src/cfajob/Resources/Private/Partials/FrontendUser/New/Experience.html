@@ -1,0 +1,33 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<div class="input-label"> <label><f:translate key="tx_cfajob.user_form.experience" /></label>
+    <div class="block-script block-experience">
+        <a href="#" class="link-add">+ <f:translate key="tx_cfajob.user_form.add_experience" /></a>
+        <div class="field-hidden">
+            <div>
+                <label for="employeur"><f:translate key="tx_cfajob.user_form.employer" /> *</label>
+                <input type="text" id="employeur" name="experience[0][employer]"/>
+            </div>
+            <div>
+                <label for="posteExp"><f:translate key="tx_cfajob.user_form.position_title" /></label>
+                <input type="text" id="posteExp" name="experience[0][posteExp]"/>
+            </div>
+            <div class="input-flex">
+                <div>
+                    <label for="dateStartExp"><f:translate key="tx_cfajob.user_form.start_year" /></label>
+                    <input type="date" id="dateStartExp" placeholder="" name="experience[0][dateStartExp]"/>
+                </div>
+                <div>
+                    <label for="dateEndExp"><f:translate key="tx_cfajob.user_form.end_year" /></label>
+                    <input type="date" id="dateEndExp" placeholder="" name="experience[0][dateEndExp]"/>
+                </div>
+            </div>
+            <div>
+                <label for="descriptionExp"><f:translate key="tx_cfajob.user_form.description" /></label>
+                <textarea id="descriptionExp" name="experience[0][descriptionExp]"></textarea>
+            </div>
+            <a href="#" class="link-add">+ <f:translate key="tx_cfajob.user_form.add_experience" /></a> </div>
+    </div>
+</div>
+
+</html>

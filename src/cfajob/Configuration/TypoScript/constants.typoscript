@@ -1,0 +1,27 @@
+plugin.tx_cfajob {
+    view {
+        # cat=plugin.tx_cfajob_cfajob/file; type=string; label=Path to template root (FE)
+        templateRootPath = EXT:cfajob/Resources/Private/Templates/
+        # cat=plugin.tx_cfajob_cfajob/file; type=string; label=Path to template partials (FE)
+        partialRootPath = EXT:cfajob/Resources/Private/Partials/
+        # cat=plugin.tx_cfajob_cfajob/file; type=string; label=Path to template layouts (FE)
+        layoutRootPath = EXT:cfajob/Resources/Private/Layouts/
+    }
+    persistence {
+        # cat=plugin.tx_cfajob_cfajob//a; type=string; label=Default storage PID
+        storagePid = 88
+    }
+
+    pagination {
+        itemsPerPage = 20
+        insertAbove = 0
+        insertBelow = 1
+        maximumNumberOfLinks = 10
+        maxAfter = 5
+        maxBefore = 3
+    }
+
+    content {
+        information = 38 RUE BENEDIT - 13004 MARSEILLE<br />04 91 84 00 02 - Mme COMBE
+    }
+}

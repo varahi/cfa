@@ -1,0 +1,33 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+
+<f:section name="content">
+
+    <f:render partial="Training/List/Filter" arguments="{training:training, cities: cities}" />
+    <div id="list-formation">
+        <f:for each="{trainings}" as="training">
+            <div class="item cat{training.city.uid}">
+                <div class="content">
+                    <f:if condition="{training.name}">
+                        <h2>{training.name}</h2>
+                    </f:if>
+                    <f:if condition="{training.categories}">
+                        <p class="category">
+                            <f:translate key="tx_cfajob.training.theme" /> :
+                            <f:render partial="Training/Properties" arguments="{training:training}" section="categories" />
+                        </p>
+                    </f:if>
+                    <f:render partial="Training/Properties" arguments="{training:training}" section="list_image" />
+                    <f:render partial="Training/Properties" arguments="{training:training}" section="button" />
+                    <div class="link">
+                        <f:link.action action="show" controller="Training" arguments="{training: training}">
+                            <f:translate key="tx_cfajob.training.learn_more" />
+                        </f:link.action>
+                    </div>
+                </div>
+            </div>
+        </f:for>
+    </div>
+
+</f:section>
+</html>

@@ -1,0 +1,46 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:section name="button">
+	<div class="button">
+		<f:if condition="{training.isDpc}">
+			<p class="bt-green" href="#"><f:translate key="tx_cfajob.training.validate_dpc" /></p>
+		</f:if>
+		<f:if condition="{training.isNew}">
+			<p class="bt-pink" href="#"><f:translate key="tx_cfajob.training.is_new" /></p>
+		</f:if>
+	</div>
+</f:section>
+
+<f:section name="categories">
+	<f:for each="{training.categories}" as="category" iteration="itemIteration">
+		<f:if condition="{itemIteration.isFirst}">{category.title}</f:if>
+	</f:for>
+</f:section>
+
+<f:section name="list_image">
+	<div class="image">
+		<f:if condition="{training.image}">
+			<f:then>
+				<f:image image="{training.image}" title="{training.name}" alt="{training.name}" width="428c" height="228c" />
+			</f:then>
+			<f:else>
+				<img src="{f:uri.resource(path:'{settings.training.list.dummyImage}', extensionName:'cfajob')}" width="428c" />
+			</f:else>
+		</f:if>
+	</div>
+</f:section>
+
+<f:section name="detail_image">
+	<div class="image">
+		<f:if condition="{training.image}">
+			<f:then>
+				<f:image image="{training.image}" title="{training.name}" alt="{training.name}" width="625c" height="547c" />
+			</f:then>
+			<f:else>
+				<img src="{f:uri.resource(path:'{settings.training.detail.dummyImage}', extensionName:'cfajob')}" width="625c" />
+			</f:else>
+		</f:if>
+	</div>
+</f:section>
+
+</html>

@@ -1,0 +1,26 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+
+<f:section name="content">
+    <f:flashMessages />
+    <f:render partial="FormErrors" />
+    <div id="middle-office">
+        <f:form class="form-std" action="create" name="newOffer" object="{newOffer}">
+            <fieldset>
+                <f:render partial="Offer/New/FieldsetPost" arguments="{positions: positions}" />
+            </fieldset>
+            <fieldset>
+                <f:render partial="Offer/New/FieldsetSociety" arguments="{positions: positions}" />
+                <f:if condition="{useRecaptcha} == 1">
+                    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+                    <div class="g-recaptcha" data-sitekey="{clientKey}"></div>
+                </f:if>
+                <div class="input-submit">
+                    <input type="submit" value="{f:translate(id:'tx_cfajob.validate')}"/>
+                </div>
+            </fieldset>
+        </f:form>
+    </div>
+
+</f:section>
+</html>

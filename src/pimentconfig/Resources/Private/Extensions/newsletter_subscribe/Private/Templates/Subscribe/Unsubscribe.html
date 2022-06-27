@@ -1,0 +1,40 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers"
+      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+      xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
+      xmlns:t="Helhum\TyposcriptRendering\ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<f:layout name="Standard"></f:layout>
+
+<f:section name="Default">
+
+	<f:if condition="{success}">
+		<f:then>
+			<f:if condition="{subscription.email} || {subscription.name}">
+
+				<p>{f:translate(key: 'youHaveUnsubscribed')}:
+					<br>
+					<f:if condition="{subscription.firstName} || {subscription.lastName}">
+						<f:then>{subscription.firstName} {subscription.lastName}
+							<br>
+						</f:then>
+					</f:if>
+					<f:if condition="{subscription.email}">
+						{subscription.email}
+					</f:if>
+				</p>
+
+			</f:if>
+			<p>
+				{f:translate(key: 'subscribeAgain')}:
+				<f:link.page pageUid="{settings.subscribePageUid}" class="button">{f:translate(key: 'newsletterSubscription')}</f:link.page>
+			</p>
+		</f:then>
+		<f:else>
+			{f:translate(key: 'noAboFound')}
+		</f:else>
+	</f:if>
+
+
+</f:section>

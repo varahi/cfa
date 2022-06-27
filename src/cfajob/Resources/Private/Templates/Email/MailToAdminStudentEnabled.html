@@ -1,0 +1,81 @@
+<f:layout name="Email" />
+<f:section name="main">
+
+    <h1>New user enabled</h1>
+    <h2>Déposer un CV </h2>
+
+    <f:if condition="{user.username}">
+        <b>Username:</b> {user.username} <br />
+    </f:if>
+    <f:if condition="{user.firstName}">
+        <b>Nom:</b> {user.firstName} <br />
+    </f:if>
+    <f:if condition="{user.lastName}">
+        <b>Prénom:</b> {user.lastName} <br />
+    </f:if>
+    <f:if condition="{user.email}">
+        <b>Votre email:</b> {user.email} <br />
+    </f:if>
+    <f:if condition="{user.titleCV}">
+        <b>Titre de votre CV:</b> {user.titleCV} <br />
+    </f:if>
+    <f:if condition="{user.location}">
+        <b>Lieu:</b> {user.location.name} <br />
+    </f:if>
+    <f:if condition="{user.position}">
+        <b>Type de poste recherché:</b> {user.position.name} <br />
+    </f:if>
+    <f:if condition="{user.about}">
+        <b>Qui êtes-vous:</b> {user.about} <br />
+    </f:if>
+    <br /><br />
+
+    <f:if condition="{diplomes}">
+        <hr /><br />
+        <h3>Votre parcours: </h3>
+        <f:for each="{diplomes}" as="diplome">
+            <f:if condition="{diplome.name}">
+                <b>Nom de l’établissement:</b> {diplome.name} <br /><br />
+            </f:if>
+            <f:if condition="{diplome.diploma}">
+                <b>Diplôme:</b> {diplome.diploma} <br /><br />
+            </f:if>
+            <f:if condition="{diplome.startYear}">
+                <b>Année début:</b> <f:format.date>{diplome.startYear}</f:format.date> <br /><br />
+            </f:if>
+            <f:if condition="{diplome.endYear}">
+                <b>Année fin:</b> <f:format.date>{diplome.endYear}</f:format.date> <br /><br />
+            </f:if>
+            <f:if condition="{diplome.description}">
+                <b>Description:</b> <br />
+                <f:format.nl2br>{diplome.description}</f:format.nl2br><br /><br />
+            </f:if>
+        </f:for><br />
+        <hr /><br />
+    </f:if>
+
+    <f:if condition="{experiences}">
+        <h3>Expérience: </h3>
+        <f:for each="{experiences}" as="experience">
+            <f:if condition="{experience.employeur}">
+                <b>Employeur:</b> {experience.employeur} <br /><br />
+            </f:if>
+            <f:if condition="{experience.position}">
+                <b>Titre du poste:</b> {experience.position} <br /><br />
+            </f:if>
+            <f:if condition="{experience.startYear}">
+                <b>Année début:</b> <f:format.date>{experience.startYear}</f:format.date> <br /><br />
+            </f:if>
+            <f:if condition="{experience.endYear}">
+                <b>Année fin:</b> <f:format.date>{experience.endYear}</f:format.date> <br /><br />
+            </f:if>
+            <f:if condition="{experience.position}">
+                <b>Description:</b> <br />
+                <f:format.nl2br>{experience.description}</f:format.nl2br>
+                <br />
+            </f:if>
+        </f:for>
+    </f:if>
+    <br /><br >
+
+</f:section>

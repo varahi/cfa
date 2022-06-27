@@ -1,0 +1,8 @@
+lib.currentPageId = TEXT
+lib.currentPageId.data = TSFE:id
+
+lib.currentURL= TEXT
+lib.currentURL.data = getIndpEnv:TYPO3_REQUEST_URL
+
+lib.information = TEXT
+lib.information.value = {$plugin.tx_cfajob.content.information}

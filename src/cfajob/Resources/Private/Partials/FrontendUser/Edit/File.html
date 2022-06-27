@@ -1,0 +1,81 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:section name="photo">
+    <div>
+        <label for="photo"><f:translate key="tx_cfajob.user_form.photo" /></label>
+        <f:if condition="{frontendUser.photo}">
+            <f:then>
+                <div id="container-image-current" class="image---uploaded-src">
+                    <f:image src="{frontendUser.photo.0.originalResource.publicUrl}" width="150c" />
+                    <br />
+                    <f:link.page section="#" class="remove-image-link"><f:translate key="tx_cfajob.user_form.remove_image" /></f:link.page>
+                </div>
+
+                <div id="container-image-upload" class="input-file" style="display: none;">
+                    <span class="bt-file"><f:translate key="tx_cfajob.user_form.browse" /></span>
+                    <span class="txt-file">(<f:translate key="tx_cfajob.user_form.file_upload_max" />)</span>
+                    <f:for each="{newFiles}" as="newFile" key="key" iteration="itemIteration">
+                        <f:form.hidden class="hidden-image-value" name="photo[removeImage]" value="0" />
+                        <f:form.upload name="photo[newImage]" id="photo-{key}" />
+                    </f:for>
+                </div>
+            </f:then>
+            <f:else>
+                <div class="input-file">
+                    <span class="bt-file"><f:translate key="tx_cfajob.user_form.browse" /></span>
+                    <span class="txt-file">(<f:translate key="tx_cfajob.user_form.file_upload_max" />)</span>
+                    <f:for each="{newFiles}" as="newFile" key="key" iteration="itemIteration">
+                        <f:form.upload name="photo[{key}]" id="photo-{key}" />
+                    </f:for>
+                </div>
+            </f:else>
+        </f:if>
+    </div>
+</f:section>
+
+<f:section name="cv">
+    <div>
+        <label for="cvNum"><f:translate key="tx_cfajob.user_form.your_digital_cv" /></label>
+        <f:if condition="{frontendUser.cvfile}">
+            <f:then>
+                <div id="container-file-current" class="image---uploaded-src">
+                    <a href="{frontendUser.cvfile.0.originalResource.publicUrl}" download="{frontendUser.cvfile.0.originalResource.name}">
+                        {frontendUser.cvfile.0.originalResource.name}
+                    </a>
+                     <br /><br />
+                    <f:link.page section="#" class="remove-file-link"><f:translate key="tx_cfajob.user_form.remove_file" /></f:link.page>
+                </div>
+                <div id="container-file-upload" class="input-file" style="display: none;">
+                    <span class="bt-file"><f:translate key="tx_cfajob.user_form.browse" /></span>
+                    <span class="txt-file">
+                            <f:translate key="tx_cfajob.user_form.no_file_selected" />
+                            <br>(<f:translate key="tx_cfajob.user_form.file_upload_max" />)</span>
+
+                    <f:for each="{newCvfiles}" as="newFile" key="key" iteration="itemIteration">
+                        <f:form.hidden class="hidden-file-value"  name="cvfile[removeFile]" value="0" />
+                        <f:form.upload name="cvfile[newFile]" id="cvNum-{key}" />
+                    </f:for>
+                </div>
+            </f:then>
+            <f:else>
+                <div class="input-file">
+                    <span class="bt-file"><f:translate key="tx_cfajob.user_form.browse" /></span>
+                    <span class="txt-file">
+                            <f:translate key="tx_cfajob.user_form.no_file_selected" />
+                            <br>(<f:translate key="tx_cfajob.user_form.file_upload_max" />)</span>
+
+                    <f:for each="{newCvfiles}" as="newFile" key="key" iteration="itemIteration">
+                        <f:form.upload name="cvfile[{key}]" id="cvNum-{key}" />
+                    </f:for>
+                </div>
+            </f:else>
+        </f:if>
+    </div>
+
+    <div class="input-label"> <label><f:translate key="tx_cfajob.user_form.cv_visibility" /></label>
+        <div><p class="txt-pink"><f:translate key="tx_cfajob.user_form.agree_info" /></p></div>
+    </div>
+
+</f:section>
+
+</html>

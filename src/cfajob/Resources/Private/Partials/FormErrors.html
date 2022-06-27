@@ -1,0 +1,15 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:form.validationResults for="{field}">
+	<div class="typo3-messages">
+		<f:for each="{validationResults.flattenedErrors}" key="propertyPath" as="propertyErrors">
+			<f:for each="{propertyErrors}" as="propertyError">
+				<div class="alert alert-danger">
+					<f:translate key="tx_cfajob_validator.{propertyPath}.{propertyError.code}" />
+				</div>
+			</f:for>
+		</f:for>
+	</div>
+</f:form.validationResults>
+
+</html>

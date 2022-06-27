@@ -1,0 +1,12 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<div id="list-category">
+    <f:for each="{cities}" as="city" iteration="iterator">
+        <div class="input-checkbox">
+            <input type="checkbox" value="{city.uid}" class="custom-checkbox" name="filtercol" />
+            <label>{city.name}</label>
+        </div>
+    </f:for>
+</div>
+
+</html>

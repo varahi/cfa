@@ -1,0 +1,140 @@
+base: 'https://www.cfapharmacie.fr/'
+baseVariants:
+  -
+    base: 'http://cfapharmacie.localhost/'
+    condition: 'getenv("HOST_ENV") == "localdev"'
+  -
+    base: 'http://dev-cfapharmacie.dyndns.org/'
+    condition: 'getenv("HOST_ENV") == "serverdev"'
+errorHandling:
+  -
+    errorCode: 404
+    errorHandler: Page
+    errorContentSource: 't3://page?uid=39'
+languages:
+  -
+    title: Français
+    enabled: true
+    languageId: 0
+    base: /
+    typo3Language: fr
+    locale: fr_FR.UTF-8
+    iso-639-1: fr
+    navigationTitle: ''
+    hreflang: fr-FR
+    direction: ''
+    flag: fr
+rootPageId: 1
+routeEnhancers:
+  News:
+    type: Extbase
+    extension: News
+    plugin: Pi1
+    routes:
+      -
+        routePath: '/page-{page}'
+        _controller: 'News::list'
+        _arguments:
+          page: '@widget_0/currentPage'
+      -
+        routePath: '/{news-title}'
+        _controller: 'News::detail'
+        _arguments:
+          news-title: news
+      -
+        routePath: '/{category-name}'
+        _controller: 'News::list'
+        _arguments:
+          category-name: overwriteDemand/categories
+      -
+        routePath: '/{tag-name}'
+        _controller: 'News::list'
+        _arguments:
+          tag-name: overwriteDemand/tags
+    defaultController: 'News::list'
+    defaults:
+      page: '0'
+    aspects:
+      news-title:
+        type: PersistedAliasMapper
+        tableName: tx_news_domain_model_news
+        routeFieldName: path_segment
+      page:
+        type: StaticRangeMapper
+        start: '1'
+        end: '100'
+      category-name:
+        type: PersistedAliasMapper
+        tableName: sys_category
+        routeFieldName: slug
+      tag-name:
+        type: PersistedAliasMapper
+        tableName: tx_news_domain_model_tag
+        routeFieldName: slug
+  CfajobPlugin:
+    type: Extbase
+    extension: Cfajob
+    plugin: Cfajob
+    routes:
+      -
+        routePath: /offers/list
+        _controller: 'Offer::list'
+      -
+        routePath: /offers/new
+        _controller: 'Offer::new'
+      -
+        routePath: '/offers/list/page-{page}'
+        _controller: 'Offer::list'
+        _arguments:
+          page: 'currentPage'
+      -
+        routePath: /student/list
+        _controller: 'FrontendUser::list'
+      -
+        routePath: '/student/{user_id}'
+        _controller: 'FrontendUser::show'
+        _arguments:
+          user_id: user
+      -
+        routePath: /student/new
+        _controller: 'FrontendUser::new'
+      -
+        routePath: '/to-cart/{user_id}'
+        _controller: 'FrontendUser::addToCart'
+        _arguments:
+          user_id: item
+      -
+        routePath: '/remove-from-cart/{user_id}'
+        _controller: 'FrontendUser::removeFromCart'
+        _arguments:
+          user_id: item
+      -
+        routePath: '/training/{training}'
+        _controller: 'Training::show'
+        _arguments:
+          training: training
+    defaultController: 'Offer::list'
+    defaults:
+      page: '0'
+    requirements:
+      page: \d+
+    aspects:
+      offer:
+        type: PersistedPatternMapper
+        tableName: tx_cfajob_domain_model_offer
+        routeFieldPattern: '^(?P<uid>\d+)$'
+        routeFieldResult: '{uid}'
+      user_id:
+        type: PersistedPatternMapper
+        tableName: fe_users
+        routeFieldPattern: '^(?P<uid>\d+)$'
+        routeFieldResult: '{uid}'
+      training:
+        type: PersistedAliasMapper
+        tableName: tx_cfajob_domain_model_training
+        routeFieldName: path_segment
+      page:
+        type: StaticRangeMapper
+        start: '1'
+        end: '100'
+websiteTitle: Cfapharmacie

@@ -1,0 +1,13 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<div>
+    <label><f:translate key="tx_cfajob.by_job_type" /></label>
+    <div class="input-flex" id="check-filter">
+        <f:for each="{positions}" as="position" iteration="iterator">
+            <div class="input-checkbox">
+                <input {f:if(condition: '{position.uid} == {checklist}', then: 'checked') -> f:for(each: '{checklistArr}', as: 'checklist')} type="checkbox" id="filter-{position.uid}" name="checklist[]" value="{position.uid}" />
+                <label for="filter-{position.uid}">{position.name}</label>
+            </div>
+        </f:for>
+    </div>
+</div>
+</html>
